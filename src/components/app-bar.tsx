@@ -1,6 +1,11 @@
 import { Appbar, useTheme } from "react-native-paper";
 
-export const AppBar = () => {
+type AppBarProps = {
+  title: string;
+  onBack?: () => void;
+};
+
+export const AppBar: React.FC<AppBarProps> = ({ title, onBack }) => {
   const theme = useTheme();
 
   return (
@@ -9,11 +14,8 @@ export const AppBar = () => {
         backgroundColor: theme.colors.primary,
       }}
     >
-      {/* <Appbar.BackAction onPress={() => {}} /> */}
-      <Appbar.Content
-        title="Alberta Fishing Regulations"
-        color={theme.colors.onPrimary}
-      />
+      {onBack && <Appbar.BackAction onPress={onBack} />}
+      <Appbar.Content title={title} color={theme.colors.onPrimary} />
     </Appbar.Header>
   );
 };
