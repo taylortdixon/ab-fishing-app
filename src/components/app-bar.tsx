@@ -12,6 +12,7 @@ export const AppBar: React.FC<AppBarProps> = ({ title, onBack }) => {
     <Appbar.Header
       style={{
         backgroundColor: theme.colors.primary,
+        zIndex: 2,
       }}
     >
       {onBack && <Appbar.BackAction onPress={onBack} />}
