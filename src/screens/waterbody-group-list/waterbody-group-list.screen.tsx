@@ -52,7 +52,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
   );
 
   return (
-    <SafeAreaView>
+    <View>
       <AppBar title="Alberta Fishing Regulations" />
       <View style={{ position: "relative" }}>
         <WaterbodySearchBar
@@ -94,6 +94,6 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
         onClose={hideDialog}
         onToggleOpenSeason={setIsOpenSeason}
       />
-    </SafeAreaView>
+    </View>
   );
 };
