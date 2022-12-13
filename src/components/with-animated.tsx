@@ -1,13 +1,15 @@
 import { Animated } from "react-native";
 import React from "react";
 
-export const withAnimated = (WrappedComponent) => {
+export function withAnimated<TComponentProps>(
+  WrappedComponent: React.ComponentType<TComponentProps>
+) {
   // Extract the display name of the inputted component
   const displayName =
     WrappedComponent.displayName || WrappedComponent.name || "Component";
 
   // Create a class based on the React Component built-in
-  class WithAnimated extends React.Component {
+  class WithAnimated extends React.Component<TComponentProps> {
     // Set display name property of new class
     displayName = `WithAnimated( ${displayName} )`;
 
@@ -19,4 +21,4 @@ export const withAnimated = (WrappedComponent) => {
 
   // Run the React Component through the built-in animatifier
   return Animated.createAnimatedComponent(WithAnimated);
-};
+}

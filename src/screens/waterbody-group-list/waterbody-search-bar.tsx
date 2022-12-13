@@ -18,7 +18,7 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
   onShowSearchPanel,
   animatedValue,
 }) => {
-  const { opacity, marginTop } = useSearchBarAnimation(animatedValue);
+  const { marginTop } = useSearchBarAnimation(animatedValue);
 
   return (
     <Animated.View
@@ -28,7 +28,6 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
         right: 0,
         position: "absolute",
         marginTop,
-        opacity,
         zIndex: 1,
       }}
     >
@@ -38,7 +37,6 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
         onChangeText={onChangeSearch}
         onIconPress={onShowSearchPanel}
         value={searchValue}
-        style={{ opacity: opacity }}
       />
     </Animated.View>
   );
