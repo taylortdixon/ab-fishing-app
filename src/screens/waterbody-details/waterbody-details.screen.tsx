@@ -1,13 +1,11 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { ScrollView, View } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import { List, Text, useTheme } from "react-native-paper";
 import { waterbodyGroups } from "../../../regulations/fishing-regulations";
-import { FishLimit, Waterbody } from "../../../regulations/waterbody.type";
+import { Waterbody } from "../../../regulations/waterbody.type";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { AppBar } from "../../components/app-bar";
-import { fishLimitsIconMap } from "../../components/fish-icons/fish-icons";
 import { WaterbodyDetailsRegulationList } from "./waterbody-details-regulation-list";
-import { FISH_LIMIT_LABELS } from "./waterbody-details.constants";
 
 type WaterbodyDetailsScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -40,7 +38,7 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
         <>
           {/* Don't display the waterbody detail again if its the same as the name which sometimes happens. */}
           {waterbody.waterbody !== waterbody.waterbody_detail && (
-            <Text variant="titleMedium" style={{ marginBottom: 12 }}>
+            <Text variant="titleMedium" style={styles.description}>
               {waterbody.waterbody_detail}
             </Text>
           )}
@@ -61,11 +59,10 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
                 titleNumberOfLines={5}
               >
                 <List.Section
-                  style={{
-                    backgroundColor: theme.colors.background,
-                    marginTop: 0,
-                    paddingLeft: 12,
-                  }}
+                  style={[
+                    styles.groupSection,
+                    { backgroundColor: theme.colors.background },
+                  ]}
                 >
                   {renderWaterbodyDetails(
                     waterbodiesByWaterbodyDetail[waterbodyDetail]
@@ -111,8 +108,8 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
         title="Alberta Fishing Regulations"
         onBack={() => navigation.goBack()}
       />
-      <ScrollView style={{ marginHorizontal: 12 }}>
-        <Text variant="displaySmall" style={{ marginVertical: 12 }}>
+      <ScrollView style={styles.container}>
+        <Text variant="displaySmall" style={styles.title}>
           {waterbodyGroup.name}
         </Text>
         {renderWaterbodyGroupDetails()}
@@ -120,3 +117,10 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  container: { paddingHorizontal: 12 },
+  title: { marginVertical: 12 },
+  description: { marginBottom: 12 },
+  groupSection: { marginTop: 0, paddingLeft: 12 },
+});

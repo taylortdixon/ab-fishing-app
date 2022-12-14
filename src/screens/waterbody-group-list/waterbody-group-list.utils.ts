@@ -10,6 +10,10 @@ const REGULATIONS_YEAR =
     : CURRENT_YEAR - 1;
 
 const filterOpenSeason = (dateRange: string) => {
+  if (dateRange.toLowerCase() === "open all year") {
+    return true;
+  }
+
   const match = dateRange.match(/Open ([A-z]+ [0-9]+) to ([A-z]+ [0-9]+)/i);
 
   if (!match) {
@@ -30,18 +34,22 @@ const filterOpenSeason = (dateRange: string) => {
 
 export const filterWaterbodyGroup =
   (searchQuery: string, isOpenSeason: boolean) =>
-  (waterbody: WaterbodyGroup) => {
-    if (!searchQuery && !isOpenSeason) {
-      return true;
+  (waterbodyGroup: WaterbodyGroup) => {
+    let result = true;
+
+    if (searchQuery) {
+      result =
+        result &&
+        waterbodyGroup.name.toLowerCase().includes(searchQuery.toLowerCase());
     }
 
-    if (waterbody.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-      return true;
+    if (isOpenSeason) {
+      result =
+        result &&
+        waterbodyGroup.waterbodies.some((waterbody) =>
+          filterOpenSeason(waterbody.season)
+        );
     }
 
-    // if (filterOpenSeason(waterbody.season)) {
-    //   return true;
-    // }
-
-    return false;
+    return result;
   };

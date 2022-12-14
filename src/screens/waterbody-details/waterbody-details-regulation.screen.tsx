@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { ScrollView, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { AppBar } from "../../components/app-bar";
@@ -21,11 +21,11 @@ export const WaterbodyDetailsRegulationScreen: React.FC<
         title="Alberta Fishing Regulations"
         onBack={() => navigation.goBack()}
       />
-      <ScrollView style={{ paddingHorizontal: 12 }}>
-        <Text variant="displaySmall" style={{ marginVertical: 12 }}>
+      <ScrollView style={styles.container}>
+        <Text variant="displaySmall" style={styles.title}>
           {waterbody.waterbody}
         </Text>
-        <Text variant="titleMedium" style={{ marginBottom: 12 }}>
+        <Text variant="titleMedium" style={styles.description}>
           {waterbody.waterbody_detail}
         </Text>
         <WaterbodyDetailsRegulationList waterbody={waterbody} />
@@ -33,3 +33,9 @@ export const WaterbodyDetailsRegulationScreen: React.FC<
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  container: { paddingHorizontal: 12 },
+  title: { marginVertical: 12 },
+  description: { marginBottom: 12 },
+});
