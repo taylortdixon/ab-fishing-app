@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { WaterbodyGroupList } from "./src/screens/waterbody-group-list/waterbody-group-list.screen";
 import { WaterbodyDetailsScreen } from "./src/screens/waterbody-details/waterbody-details.screen";
 import { RootStackParamList } from "./root-stack-param-list.type";
+import { WaterbodyDetailsRegulationScreen } from "./src/screens/waterbody-details/waterbody-details-regulation.screen";
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isSameOrBefore);
@@ -28,6 +29,10 @@ export default function App() {
           <Stack.Screen
             name="WaterbodyGroupDetails"
             component={WaterbodyDetailsScreen}
+          />
+          <Stack.Screen
+            name="WaterbodyGroupDetailsRegulation"
+            component={WaterbodyDetailsRegulationScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

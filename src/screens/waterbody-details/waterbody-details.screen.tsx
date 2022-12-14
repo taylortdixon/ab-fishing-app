@@ -6,6 +6,7 @@ import { FishLimit, Waterbody } from "../../../regulations/waterbody.type";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { AppBar } from "../../components/app-bar";
 import { fishLimitsIconMap } from "../../components/fish-icons/fish-icons";
+import { WaterbodyDetailsRegulationList } from "./waterbody-details-regulation-list";
 import { FISH_LIMIT_LABELS } from "./waterbody-details.constants";
 
 type WaterbodyDetailsScreenProps = NativeStackScreenProps<
@@ -32,6 +33,78 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
       return acc;
     }, {});
 
+  const renderWaterbodyGroupDetails = () => {
+    if (waterbodyGroup.waterbodies.length === 1) {
+      const waterbody = waterbodyGroup.waterbodies[0];
+      return (
+        <>
+          {/* Don't display the waterbody detail again if its the same as the name which sometimes happens. */}
+          {waterbody.waterbody !== waterbody.waterbody_detail && (
+            <Text variant="titleMedium" style={{ marginBottom: 12 }}>
+              {waterbody.waterbody_detail}
+            </Text>
+          )}
+
+          <WaterbodyDetailsRegulationList waterbody={waterbody} />
+        </>
+      );
+    }
+
+    return (
+      <>
+        {Object.keys(waterbodiesByWaterbodyDetail).map((waterbodyDetail) => {
+          return (
+            <List.AccordionGroup key={waterbodyDetail}>
+              <List.Accordion
+                id={waterbodyDetail}
+                title={<Text variant="titleMedium">{waterbodyDetail}</Text>}
+                titleNumberOfLines={5}
+              >
+                <List.Section
+                  style={{
+                    backgroundColor: theme.colors.background,
+                    marginTop: 0,
+                    paddingLeft: 12,
+                  }}
+                >
+                  {renderWaterbodyDetails(
+                    waterbodiesByWaterbodyDetail[waterbodyDetail]
+                  )}
+                </List.Section>
+              </List.Accordion>
+            </List.AccordionGroup>
+          );
+        })}
+      </>
+    );
+  };
+
+  const renderWaterbodyDetails = (waterbodies: Waterbody[]) => {
+    if (waterbodies.length === 1) {
+      return <WaterbodyDetailsRegulationList waterbody={waterbodies[0]} />;
+    }
+
+    return (
+      <>
+        <List.Subheader>Tap to view details</List.Subheader>
+        {waterbodies.map((waterbody) => {
+          return (
+            <List.Item
+              key={waterbody.id}
+              title={waterbody.season}
+              titleNumberOfLines={3}
+              onPress={() =>
+                navigation.navigate("WaterbodyGroupDetailsRegulation", {
+                  waterbody,
+                })
+              }
+            />
+          );
+        })}
+      </>
+    );
+  };
+
   return (
     <>
       <AppBar
@@ -42,66 +115,7 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
         <Text variant="displaySmall" style={{ marginVertical: 12 }}>
           {waterbodyGroup.name}
         </Text>
-        <>
-          {Object.keys(waterbodiesByWaterbodyDetail).map((waterbodyDetail) => {
-            return (
-              <List.AccordionGroup>
-                <List.Accordion
-                  key={waterbodyDetail}
-                  id={waterbodyDetail}
-                  title={<Text variant="titleMedium">{waterbodyDetail}</Text>}
-                  titleNumberOfLines={5}
-                >
-                  <List.AccordionGroup>
-                    {waterbodiesByWaterbodyDetail[waterbodyDetail].map(
-                      (waterbody) => {
-                        return (
-                          <List.Accordion
-                            key={waterbody.id}
-                            id={waterbody.id}
-                            title={waterbody.season}
-                            titleNumberOfLines={3}
-                            style={{ marginLeft: 12 }}
-                          >
-                            <List.Item
-                              title="Zone"
-                              description={waterbody.fish_management_zone}
-                              left={() => <View style={{ width: 50 }} />}
-                            />
-                            <List.Item
-                              title="Bait Ban"
-                              description={waterbody.bait_ban}
-                              left={() => <View style={{ width: 50 }} />}
-                            />
-                            {Object.entries(waterbody.fish_limits).map(
-                              ([limitName, limit]) => {
-                                if (!limit) {
-                                  return null;
-                                }
-
-                                const Icon =
-                                  fishLimitsIconMap[limitName as FishLimit];
-
-                                return (
-                                  <List.Item
-                                    key={limitName}
-                                    title={FISH_LIMIT_LABELS[limitName]}
-                                    description={limit}
-                                    left={() => <Icon width={50} height={50} />}
-                                  />
-                                );
-                              }
-                            )}
-                          </List.Accordion>
-                        );
-                      }
-                    )}
-                  </List.AccordionGroup>
-                </List.Accordion>
-              </List.AccordionGroup>
-            );
-          })}
-        </>
+        {renderWaterbodyGroupDetails()}
       </ScrollView>
     </>
   );
