@@ -6,6 +6,7 @@ import { Waterbody } from "../../../regulations/waterbody.type";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { AppBar } from "../../components/app-bar";
 import { WaterbodyDetailsRegulationList } from "./waterbody-details-regulation-list";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type WaterbodyDetailsScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -103,7 +104,7 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
   };
 
   return (
-    <>
+    <SafeAreaView style={styles.safeArea}>
       <AppBar
         title="Alberta Fishing Regulations"
         onBack={() => navigation.goBack()}
@@ -114,11 +115,12 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
         </Text>
         {renderWaterbodyGroupDetails()}
       </ScrollView>
-    </>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  safeArea: { flex: 1 },
   container: { paddingHorizontal: 12 },
   title: { marginVertical: 12 },
   description: { marginBottom: 12 },

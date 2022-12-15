@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build:apk": "eas build -p android --profile preview"
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.0",
@@ -15,6 +16,7 @@
     "@types/react-native": "~0.70.6",
     "dayjs": "^1.11.6",
     "expo": "~47.0.8",
+    "expo-constants": "~14.0.2",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
     "react-native": "0.70.5",

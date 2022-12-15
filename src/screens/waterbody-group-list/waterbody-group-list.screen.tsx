@@ -8,6 +8,7 @@ import { WaterbodyFilterModal } from "./waterbody-filter-modal";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { WaterbodySearchBar } from "./waterbody-search-bar";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 type WaterbodyGroupListProps = NativeStackScreenProps<
   RootStackParamList,
@@ -32,7 +33,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
   );
 
   return (
-    <View>
+    <SafeAreaView style={{ flex: 1 }}>
       <AppBar title="Alberta Fishing Regulations" />
       <View style={{ position: "relative" }}>
         <WaterbodySearchBar
@@ -76,6 +77,6 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
         onClose={hideDialog}
         onToggleOpenSeason={setIsOpenSeason}
       />
-    </View>
+    </SafeAreaView>
   );
 };

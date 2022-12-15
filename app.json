@@ -3,7 +3,7 @@
     "name": "ab-fishing-app",
     "slug": "ab-fishing-app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -21,9 +21,15 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FFFFFF",
+        "monochromeImage": "./assets/monochrome-icon.png"
       },
       "package": "com.abfishing.abfishingapp"
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#005faf",
+      "translucent": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
