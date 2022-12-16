@@ -35,7 +35,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <AppBar title="Alberta Fishing Regulations" />
+      <AppBar title="AB Fishing" />
       <View style={{ position: "relative" }}>
         <WaterbodySearchBar
           searchValue={searchQuery}

@@ -107,10 +107,7 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <AppBar
-        title="Alberta Fishing Regulations"
-        onBack={() => navigation.goBack()}
-      />
+      <AppBar title="AB Fishing" onBack={() => navigation.goBack()} />
       <ScrollView style={styles.container}>
         <Text variant="displaySmall" style={styles.title}>
           {waterbodyGroup.name}

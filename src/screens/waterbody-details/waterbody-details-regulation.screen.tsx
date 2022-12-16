@@ -18,10 +18,7 @@ export const WaterbodyDetailsRegulationScreen: React.FC<
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <AppBar
-        title="Alberta Fishing Regulations"
-        onBack={() => navigation.goBack()}
-      />
+      <AppBar title="AB Fishing" onBack={() => navigation.goBack()} />
       <ScrollView style={styles.container}>
         <Text variant="displaySmall" style={styles.title}>
           {waterbody.waterbody}

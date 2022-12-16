@@ -8,7 +8,6 @@ type AppBarProps = {
 };
 
 export const AppBar: React.FC<AppBarProps> = ({ title, onBack }) => {
-  const { top } = useSafeAreaInsets();
   const theme = useTheme();
 
   return (
