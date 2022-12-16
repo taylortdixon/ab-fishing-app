@@ -1,6 +1,5 @@
 import { List, Text } from "react-native-paper";
 import { Animated, View } from "react-native";
-import { waterbodyGroups } from "../../../regulations/fishing-regulations";
 import React, { useState, useRef } from "react";
 import { AppBar } from "../../components/app-bar";
 import { filterWaterbodyGroup } from "./waterbody-group-list.utils";
@@ -9,6 +8,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { WaterbodySearchBar } from "./waterbody-search-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRegulationsContext } from "../../components/regulations.context";
 
 type WaterbodyGroupListProps = NativeStackScreenProps<
   RootStackParamList,
@@ -18,6 +18,7 @@ type WaterbodyGroupListProps = NativeStackScreenProps<
 export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
   navigation,
 }) => {
+  const { regulations } = useRegulationsContext();
   const [searchQuery, setSearchQuery] = useState("");
   const [isOpenSeason, setIsOpenSeason] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -28,9 +29,9 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
 
-  const filteredWaterbodyGroups = Object.values(waterbodyGroups).filter(
-    filterWaterbodyGroup(searchQuery, isOpenSeason)
-  );
+  const filteredWaterbodyGroups = Object.values(
+    regulations.waterbody_groups
+  ).filter(filterWaterbodyGroup(searchQuery, isOpenSeason));
 
   return (
     <SafeAreaView style={{ flex: 1 }}>

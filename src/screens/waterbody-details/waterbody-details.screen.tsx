@@ -1,12 +1,12 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { ScrollView, StyleSheet } from "react-native";
 import { List, Text, useTheme } from "react-native-paper";
-import { waterbodyGroups } from "../../../regulations/fishing-regulations";
 import { Waterbody } from "../../../regulations/waterbody.type";
 import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { AppBar } from "../../components/app-bar";
 import { WaterbodyDetailsRegulationList } from "./waterbody-details-regulation-list";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRegulationsContext } from "../../components/regulations.context";
 
 type WaterbodyDetailsScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -20,7 +20,9 @@ export const WaterbodyDetailsScreen: React.FC<WaterbodyDetailsScreenProps> = ({
   route,
 }) => {
   const theme = useTheme();
-  const waterbodyGroup = waterbodyGroups[route.params.waterbodyGroupId];
+  const { regulations } = useRegulationsContext();
+  const waterbodyGroup =
+    regulations.waterbody_groups[route.params.waterbodyGroupId];
 
   const waterbodiesByWaterbodyDetail =
     waterbodyGroup.waterbodies.reduce<WaterbodyDetailMap>((acc, waterbody) => {

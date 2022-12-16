@@ -1,4 +1,7 @@
 import { Waterbody, WaterbodyGroupMap } from "./waterbody.type";
+
+export const REGULATIONS_VERSION = "April 10, 2022";
+
 export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
