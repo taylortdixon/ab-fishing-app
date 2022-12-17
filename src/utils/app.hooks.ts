@@ -85,7 +85,7 @@ export const useAppInitialization = () => {
 
         if (
           dayjs(updatedRegulationsDefinition.version).isAfter(
-            existingRegulationsDefinition.version
+            dayjs(existingRegulationsDefinition.version)
           )
         ) {
           setRegulations(updatedRegulationsDefinition);
