@@ -21,9 +21,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FFFFFF",
+        "monochromeImage": "./assets/monochrome-icon.png"
       },
-      "monochromeImage": "./assets/monochrome-icon.png",
       "package": "com.abfishing.abfishingapp"
     },
     "androidStatusBar": {

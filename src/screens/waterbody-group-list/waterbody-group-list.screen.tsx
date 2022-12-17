@@ -1,5 +1,12 @@
-import { List, Text } from "react-native-paper";
-import { Animated, View } from "react-native";
+import {
+  Button,
+  Dialog,
+  List,
+  Paragraph,
+  Portal,
+  Text,
+} from "react-native-paper";
+import { Animated, View, Linking } from "react-native";
 import React, { useState, useRef } from "react";
 import { AppBar } from "../../components/app-bar";
 import { filterWaterbodyGroup } from "./waterbody-group-list.utils";
@@ -9,6 +16,7 @@ import { RootStackParamList } from "../../../root-stack-param-list.type";
 import { WaterbodySearchBar } from "./waterbody-search-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRegulationsContext } from "../../components/regulations.context";
+import { ConfirmationModal } from "./confirmation-modal";
 
 type WaterbodyGroupListProps = NativeStackScreenProps<
   RootStackParamList,
@@ -78,6 +86,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
         onClose={hideDialog}
         onToggleOpenSeason={setIsOpenSeason}
       />
+      <ConfirmationModal />
     </SafeAreaView>
   );
 };

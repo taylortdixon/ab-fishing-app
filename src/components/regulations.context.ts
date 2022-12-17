@@ -3,6 +3,8 @@ import { RegulationsDefinition } from "../../regulations/waterbody.type";
 
 type RegulationsContextType = {
   regulations: RegulationsDefinition;
+  confirmed: boolean;
+  updateConfirmation: () => void;
 };
 
 export const RegulationsContext = createContext<

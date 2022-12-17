@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Linking } from "react-native";
 import { List } from "react-native-paper";
 import { FishLimit, Waterbody } from "../../../regulations/waterbody.type";
 import { fishLimitsIconMap } from "../../components/fish-icons/fish-icons";
@@ -30,6 +30,16 @@ export const WaterbodyDetailsRegulationList: React.FC<
         title="Bait Ban"
         description={waterbody.bait_ban}
         left={() => DummyIcon}
+      />
+      <List.Item
+        title="Alberta Regulations"
+        description="Tap to view official page"
+        left={() => DummyIcon}
+        onPress={() =>
+          Linking.openURL(
+            `https://albertaregulations.ca/fishingregs/${waterbody.fish_management_zone}.pdf`
+          )
+        }
       />
       {Object.entries(waterbody.fish_limits).map(([limitName, limit]) => {
         if (!limit) {

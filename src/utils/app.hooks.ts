@@ -7,11 +7,14 @@ import {
 } from "../../regulations/fishing-regulations";
 import { RegulationsDefinition } from "../../regulations/waterbody.type";
 
+const CONFIRMATION_STORAGE_KEY = "@confirmation";
 const REGULATIONS_STORAGE_KEY = "@regulations";
 const REGULATIONS_REMOTE_URL = "https://abfishing.ca/regulations.json";
 
 export const useAppInitialization = () => {
   const [initialized, setInitialized] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
+
   const [regulations, setRegulations] =
     useState<RegulationsDefinition>(undefined);
 
@@ -93,8 +96,35 @@ export const useAppInitialization = () => {
     fetchLatestRegulations();
   }, [regulations]);
 
+  useEffect(() => {
+    async function fetchConfirmation() {
+      try {
+        const storedConfirmation = await AsyncStorage.getItem(
+          CONFIRMATION_STORAGE_KEY
+        );
+
+        setConfirmed(!!storedConfirmation);
+      } catch (e) {
+        setConfirmed(true);
+      }
+    }
+
+    fetchConfirmation();
+  }, []);
+
+  const updateConfirmation = async () => {
+    try {
+      await AsyncStorage.setItem(CONFIRMATION_STORAGE_KEY, "true");
+    } catch (e) {
+    } finally {
+      setConfirmed(true);
+    }
+  };
+
   return {
     initialized,
     regulations: regulations,
+    confirmed,
+    updateConfirmation,
   } as const;
 };
