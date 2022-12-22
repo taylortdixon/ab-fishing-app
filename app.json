@@ -16,19 +16,20 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
+      "bundleIdentifier": "ab-fishing",
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#00629d",
         "monochromeImage": "./assets/monochrome-icon.png"
       },
       "package": "com.abfishing.abfishingapp"
     },
     "androidStatusBar": {
       "barStyle": "light-content",
-      "backgroundColor": "#005faf",
+      "backgroundColor": "#00629d",
       "translucent": false
     },
     "web": {
