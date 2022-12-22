@@ -7,7 +7,7 @@ import {
   Text,
 } from "react-native-paper";
 import { Animated, View, Linking } from "react-native";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import { AppBar } from "../../components/app-bar";
 import { filterWaterbodyGroup } from "./waterbody-group-list.utils";
 import { WaterbodyFilterModal } from "./waterbody-filter-modal";
@@ -17,6 +17,7 @@ import { WaterbodySearchBar } from "./waterbody-search-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRegulationsContext } from "../../components/regulations.context";
 import { ConfirmationModal } from "./confirmation-modal";
+import { WaterbodyGroup } from "../../../regulations/waterbody.type";
 
 type WaterbodyGroupListProps = NativeStackScreenProps<
   RootStackParamList,
@@ -37,9 +38,21 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
 
-  const filteredWaterbodyGroups = Object.values(
-    regulations.waterbody_groups
-  ).filter(filterWaterbodyGroup(searchQuery, isOpenSeason));
+  const filteredWaterbodyGroups = useMemo(
+    () =>
+      Object.values(regulations.waterbody_groups).filter(
+        filterWaterbodyGroup(searchQuery, isOpenSeason)
+      ),
+    [regulations, searchQuery, isOpenSeason]
+  );
+
+  const flatListData: Array<WaterbodyGroup | undefined> = useMemo(
+    () =>
+      filteredWaterbodyGroups.length > 0
+        ? [undefined, ...filteredWaterbodyGroups]
+        : [],
+    [filteredWaterbodyGroups]
+  );
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -52,21 +65,14 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
           animatedValue={scrollOffsetY}
         />
 
-        <Animated.ScrollView
-          scrollEventThrottle={1}
-          onScroll={Animated.event(
-            [{ nativeEvent: { contentOffset: { y: scrollOffsetY } } }],
-            { useNativeDriver: false }
-          )}
-        >
-          <Animated.View style={{ height: 52, zIndex: -1 }} />
-          <List.Section>
-            {filteredWaterbodyGroups.length === 0 && (
-              <List.Item
-                title={<Text variant="titleLarge">No results found</Text>}
-              />
-            )}
-            {filteredWaterbodyGroups.map((regulation) => (
+        <Animated.FlatList
+          data={flatListData}
+          renderItem={({ item: regulation }) => {
+            if (!regulation) {
+              return <Animated.View style={{ height: 52, zIndex: -1 }} />;
+            }
+
+            return (
               <List.Item
                 key={regulation.id}
                 title={<Text variant="titleLarge">{regulation.name}</Text>}
@@ -76,9 +82,22 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
                   })
                 }
               />
-            ))}
-          </List.Section>
-        </Animated.ScrollView>
+            );
+          }}
+          scrollEventThrottle={1}
+          onScroll={Animated.event(
+            [{ nativeEvent: { contentOffset: { y: scrollOffsetY } } }],
+            { useNativeDriver: false }
+          )}
+          ListEmptyComponent={() => (
+            <List.Section>
+              <Animated.View style={{ height: 52, zIndex: -1 }} />
+              <List.Item
+                title={<Text variant="titleLarge">No results found</Text>}
+              />
+            </List.Section>
+          )}
+        ></Animated.FlatList>
       </View>
       <WaterbodyFilterModal
         isOpenSeason={isOpenSeason}
