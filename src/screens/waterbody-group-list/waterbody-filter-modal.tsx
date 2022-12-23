@@ -1,19 +1,26 @@
 import { View } from "react-native";
 import { Modal, Portal, Switch, Text } from "react-native-paper";
+import { SearchFilters } from "./waterbody-group-list-filters.hook";
 
 type WaterbodyFilterModalProps = {
-  isOpenSeason: boolean;
+  searchFilters: SearchFilters;
   visible: boolean;
 
-  onToggleOpenSeason: (isOpenSeason: boolean) => void;
+  updateSearchFilter: <
+    K extends keyof SearchFilters,
+    P extends SearchFilters[K]
+  >(
+    name: keyof SearchFilters,
+    value: P
+  ) => void;
   onClose: () => void;
 };
 
 export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
-  isOpenSeason,
+  searchFilters,
   visible,
   onClose,
-  onToggleOpenSeason,
+  updateSearchFilter,
 }) => {
   return (
     <Portal>
@@ -40,8 +47,10 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
           <Text style={{ marginRight: 12 }}>Open Season</Text>
           <View>
             <Switch
-              value={isOpenSeason}
-              onValueChange={() => onToggleOpenSeason(!isOpenSeason)}
+              value={searchFilters.isOpenSeason}
+              onValueChange={() =>
+                updateSearchFilter("isOpenSeason", !searchFilters.isOpenSeason)
+              }
             />
           </View>
         </View>

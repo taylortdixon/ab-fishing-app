@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Animated } from "react-native";
 
-const MAX_SEARCH_BAR_HEIGHT = 52;
+export const MAX_SEARCH_BAR_HEIGHT = 54;
 const MINIMUM_SCROLL_THRESHOLD = MAX_SEARCH_BAR_HEIGHT / 2;
 const SCROLL_BAR_ANIMATION_DURATION_MS = 250;
 

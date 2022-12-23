@@ -18,6 +18,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRegulationsContext } from "../../components/regulations.context";
 import { ConfirmationModal } from "./confirmation-modal";
 import { WaterbodyGroup } from "../../../regulations/waterbody.type";
+import { useFilteredWaterbodyGroups } from "./waterbody-group-list-filters.hook";
+import { MAX_SEARCH_BAR_HEIGHT } from "./search-bar-animation.hook";
 
 type WaterbodyGroupListProps = NativeStackScreenProps<
   RootStackParamList,
@@ -27,24 +29,16 @@ type WaterbodyGroupListProps = NativeStackScreenProps<
 export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
   navigation,
 }) => {
-  const { regulations } = useRegulationsContext();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isOpenSeason, setIsOpenSeason] = useState(false);
+  const { filteredWaterbodyGroups, searchFilters, updateSearchFilter } =
+    useFilteredWaterbodyGroups();
+
   const [visible, setVisible] = useState(false);
   let scrollOffsetY = useRef(new Animated.Value(0)).current;
 
-  const onChangeSearch = (query: string) => setSearchQuery(query);
+  const onChangeSearch = (query: string) => updateSearchFilter("name", query);
 
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
-
-  const filteredWaterbodyGroups = useMemo(
-    () =>
-      Object.values(regulations.waterbody_groups).filter(
-        filterWaterbodyGroup(searchQuery, isOpenSeason)
-      ),
-    [regulations, searchQuery, isOpenSeason]
-  );
 
   const flatListData: Array<WaterbodyGroup | undefined> = useMemo(
     () =>
@@ -59,7 +53,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
       <AppBar title="AB Fishing" />
       <View style={{ position: "relative" }}>
         <WaterbodySearchBar
-          searchValue={searchQuery}
+          searchFilters={searchFilters}
           onChangeSearch={onChangeSearch}
           onShowSearchPanel={showDialog}
           animatedValue={scrollOffsetY}
@@ -69,7 +63,11 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
           data={flatListData}
           renderItem={({ item: regulation }) => {
             if (!regulation) {
-              return <Animated.View style={{ height: 52, zIndex: -1 }} />;
+              return (
+                <Animated.View
+                  style={{ height: MAX_SEARCH_BAR_HEIGHT, zIndex: -1 }}
+                />
+              );
             }
 
             return (
@@ -91,7 +89,9 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
           )}
           ListEmptyComponent={() => (
             <List.Section>
-              <Animated.View style={{ height: 52, zIndex: -1 }} />
+              <Animated.View
+                style={{ height: MAX_SEARCH_BAR_HEIGHT, zIndex: -1 }}
+              />
               <List.Item
                 title={<Text variant="titleLarge">No results found</Text>}
               />
@@ -100,10 +100,10 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
         ></Animated.FlatList>
       </View>
       <WaterbodyFilterModal
-        isOpenSeason={isOpenSeason}
+        searchFilters={searchFilters}
         visible={visible}
         onClose={hideDialog}
-        onToggleOpenSeason={setIsOpenSeason}
+        updateSearchFilter={updateSearchFilter}
       />
       <ConfirmationModal />
     </SafeAreaView>
