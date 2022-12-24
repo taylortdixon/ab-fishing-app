@@ -54,7 +54,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
       <View style={{ position: "relative" }}>
         <WaterbodySearchBar
           searchFilters={searchFilters}
-          onChangeSearch={onChangeSearch}
+          updateSearchFilter={updateSearchFilter}
           onShowSearchPanel={showDialog}
           animatedValue={scrollOffsetY}
         />

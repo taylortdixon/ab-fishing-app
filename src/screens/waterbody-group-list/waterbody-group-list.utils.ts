@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { Waterbody, WaterbodyGroup } from "../../../regulations/waterbody.type";
+import { SearchFilters } from "./waterbody-group-list-filters.hook";
 
 const REGULATIONS_CUTOFF_MONTH_INDEX = 2; // March
 const TODAY = dayjs();
@@ -32,24 +33,58 @@ const filterOpenSeason = (dateRange: string) => {
   return TODAY.isSameOrAfter(startDate) && TODAY.isSameOrBefore(endDate);
 };
 
-export const filterWaterbodyGroup =
-  (searchQuery: string, isOpenSeason: boolean) =>
-  (waterbodyGroup: WaterbodyGroup) => {
-    let result = true;
+const filterZone = (
+  currentFishManagementZone: string,
+  selectedFishManagementZone: string
+) => {
+  return currentFishManagementZone.startsWith(selectedFishManagementZone);
+};
 
-    if (searchQuery) {
-      result =
-        result &&
-        waterbodyGroup.name.toLowerCase().includes(searchQuery.toLowerCase());
+const filterWaterbodyType = (
+  currentFishManagementZone: string,
+  selectedWaterbodyType: string
+) => {
+  return currentFishManagementZone.endsWith(selectedWaterbodyType);
+};
+
+export const filterWaterbodyGroup =
+  (searchFilters: SearchFilters) => (waterbodyGroup: WaterbodyGroup) => {
+    let results = [];
+
+    if (searchFilters.name) {
+      results.push(
+        waterbodyGroup.name
+          .toLowerCase()
+          .includes(searchFilters.name.toLowerCase())
+      );
     }
 
-    if (isOpenSeason) {
-      result =
-        result &&
+    if (searchFilters.isOpenSeason) {
+      results.push(
         waterbodyGroup.waterbodies.some((waterbody) =>
           filterOpenSeason(waterbody.season)
-        );
+        )
+      );
     }
 
-    return result;
+    if (searchFilters.zone) {
+      results.push(
+        waterbodyGroup.waterbodies.some((waterbody) =>
+          filterZone(waterbody.fish_management_zone, searchFilters.zone)
+        )
+      );
+    }
+
+    if (searchFilters.waterbodyType) {
+      results.push(
+        waterbodyGroup.waterbodies.some((waterbody) =>
+          filterWaterbodyType(
+            waterbody.fish_management_zone,
+            searchFilters.waterbodyType
+          )
+        )
+      );
+    }
+
+    return results.every((result) => !!result);
   };

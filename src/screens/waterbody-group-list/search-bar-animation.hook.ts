@@ -7,6 +7,7 @@ const SCROLL_BAR_ANIMATION_DURATION_MS = 250;
 
 export const useSearchBarAnimation = (animatedValue: Animated.Value) => {
   const searchBarMarginTop = useRef(new Animated.Value(0)).current;
+  const lastAnimatedDirection = useRef<"open" | "close">("open");
 
   const lastScrollPosition = useRef(0);
 
@@ -15,6 +16,7 @@ export const useSearchBarAnimation = (animatedValue: Animated.Value) => {
       currentScrollPosition.value - lastScrollPosition.current;
 
     if (
+      lastAnimatedDirection.current !== "close" &&
       scrollDistance > 2 &&
       currentScrollPosition.value >= MINIMUM_SCROLL_THRESHOLD
     ) {
@@ -23,15 +25,19 @@ export const useSearchBarAnimation = (animatedValue: Animated.Value) => {
         duration: SCROLL_BAR_ANIMATION_DURATION_MS,
         useNativeDriver: false,
       }).start();
+
+      lastAnimatedDirection.current = "close";
     } else if (
-      scrollDistance < -2 ||
-      currentScrollPosition.value <= MINIMUM_SCROLL_THRESHOLD
+      lastAnimatedDirection.current !== "open" &&
+      (scrollDistance < -2 ||
+        currentScrollPosition.value <= MINIMUM_SCROLL_THRESHOLD)
     ) {
       Animated.timing(searchBarMarginTop, {
         toValue: 0,
         duration: SCROLL_BAR_ANIMATION_DURATION_MS,
         useNativeDriver: false,
       }).start();
+      lastAnimatedDirection.current = "open";
     }
 
     lastScrollPosition.current = currentScrollPosition.value;

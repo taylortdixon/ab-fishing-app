@@ -5,6 +5,8 @@ import { filterWaterbodyGroup } from "./waterbody-group-list.utils";
 export type SearchFilters = {
   name?: string;
   isOpenSeason?: boolean;
+  zone?: string;
+  waterbodyType?: string;
 };
 
 export type UpdateSearchFilter<
@@ -29,7 +31,7 @@ export const useFilteredWaterbodyGroups = () => {
   const filteredWaterbodyGroups = useMemo(
     () =>
       Object.values(regulations.waterbody_groups).filter(
-        filterWaterbodyGroup(searchFilters.name, searchFilters.isOpenSeason)
+        filterWaterbodyGroup(searchFilters)
       ),
     [regulations, searchFilters]
   );
