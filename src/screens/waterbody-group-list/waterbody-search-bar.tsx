@@ -20,6 +20,23 @@ const searchFilterLabelMap: Record<keyof SearchFilters, string> = {
   waterbodyType: "Waterbody Type",
 };
 
+function mapFilterDisplayValue<
+  K extends keyof SearchFilters,
+  P extends SearchFilters[K]
+>(filterName: K, filterValue: P) {
+  if (filterName === "isOpenSeason") {
+    return "Open Season";
+  }
+
+  if (filterName === "waterbodyType") {
+    return filterValue;
+  }
+
+  if (filterName === "zone") {
+    return `Zone ${filterValue}`;
+  }
+}
+
 export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
   searchFilters,
   updateSearchFilter,
@@ -33,20 +50,12 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
   const onChangeText = (query: string) => updateSearchFilter("name", query);
   const onClearSearch = () => updateSearchFilter("name", "");
 
-  const [appliedHiddenSearchFilterName] =
-    Object.entries(searchFilters).find(
+  const [appliedHiddenSearchFilterName, appliedHiddenFilterSearchValue] =
+    (Object.entries(searchFilters).find(
       ([k, v]: [keyof SearchFilters, any]) => k !== "name" && !!v
-    ) || [];
+    ) as [keyof SearchFilters, any]) || [];
+
   const hasHiddenFiltersApplied = !!appliedHiddenSearchFilterName;
-
-  const onFilterButtonPress = () => {
-    if (!hasHiddenFiltersApplied) {
-      onShowSearchPanel();
-      return;
-    }
-
-    updateSearchFilter(appliedHiddenSearchFilterName, undefined);
-  };
 
   return (
     <Animated.View style={[{ marginTop }, styles.searchBarWrapper]}>
@@ -67,16 +76,21 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
           icon="close"
           mode="contained"
           style={styles.filterButton}
-          onPress={onFilterButtonPress}
+          onPress={() =>
+            updateSearchFilter(appliedHiddenSearchFilterName, undefined)
+          }
         >
-          {searchFilterLabelMap[appliedHiddenSearchFilterName]}
+          {mapFilterDisplayValue(
+            appliedHiddenSearchFilterName,
+            appliedHiddenFilterSearchValue
+          )}
         </Button>
       ) : (
         <Button
           icon="filter-variant"
           mode="contained-tonal"
           style={styles.filterButton}
-          onPress={onFilterButtonPress}
+          onPress={() => onShowSearchPanel()}
         >
           Filters
         </Button>

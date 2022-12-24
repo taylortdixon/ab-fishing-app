@@ -34,8 +34,8 @@ const fishManagementZoneOptions: SelectableFilterItemOption[] = [
 ];
 
 const waterbodyTypeOptions: SelectableFilterItemOption[] = [
-  { label: "Lake", value: "Lakes" },
-  { label: "River", value: "Rivers" },
+  { label: "Lakes", value: "Lakes" },
+  { label: "Rivers", value: "Rivers" },
 ];
 
 export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
