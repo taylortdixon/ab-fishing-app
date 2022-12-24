@@ -7,6 +7,9 @@ const SCROLL_BAR_ANIMATION_DURATION_MS = 250;
 
 export const useSearchBarAnimation = (animatedValue: Animated.Value) => {
   const searchBarMarginTop = useRef(new Animated.Value(0)).current;
+  const filterBarTop = useRef(
+    new Animated.Value(MAX_SEARCH_BAR_HEIGHT)
+  ).current;
   const lastAnimatedDirection = useRef<"open" | "close">("open");
 
   const lastScrollPosition = useRef(0);
@@ -26,6 +29,12 @@ export const useSearchBarAnimation = (animatedValue: Animated.Value) => {
         useNativeDriver: false,
       }).start();
 
+      Animated.timing(filterBarTop, {
+        toValue: 0,
+        duration: SCROLL_BAR_ANIMATION_DURATION_MS,
+        useNativeDriver: false,
+      }).start();
+
       lastAnimatedDirection.current = "close";
     } else if (
       lastAnimatedDirection.current !== "open" &&
@@ -37,11 +46,16 @@ export const useSearchBarAnimation = (animatedValue: Animated.Value) => {
         duration: SCROLL_BAR_ANIMATION_DURATION_MS,
         useNativeDriver: false,
       }).start();
+
+      Animated.timing(filterBarTop, {
+        toValue: MAX_SEARCH_BAR_HEIGHT,
+        duration: SCROLL_BAR_ANIMATION_DURATION_MS,
+        useNativeDriver: false,
+      }).start();
       lastAnimatedDirection.current = "open";
     }
 
     lastScrollPosition.current = currentScrollPosition.value;
   });
-
-  return { marginTop: searchBarMarginTop };
+  return { searchBarMarginTop, filterBarTop };
 };

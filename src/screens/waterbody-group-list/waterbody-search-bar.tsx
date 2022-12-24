@@ -1,5 +1,5 @@
 import { Button, TextInput, useTheme } from "react-native-paper";
-import { Animated, StyleSheet } from "react-native";
+import { Animated, Keyboard, StyleSheet } from "react-native";
 import { useSearchBarAnimation } from "./search-bar-animation.hook";
 import { withAnimated } from "../../components/with-animated";
 import { SearchFilters } from "./waterbody-group-list-filters.hook";
@@ -11,13 +11,6 @@ type WaterbodySearchBarProps = {
   onShowSearchPanel: () => void;
   searchFilters: SearchFilters;
   animatedValue: Animated.Value;
-};
-
-const searchFilterLabelMap: Record<keyof SearchFilters, string> = {
-  isOpenSeason: "Open Season",
-  name: "",
-  zone: "Zone",
-  waterbodyType: "Waterbody Type",
 };
 
 function mapFilterDisplayValue<
@@ -44,11 +37,16 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
   animatedValue,
 }) => {
   const theme = useTheme();
-  const { marginTop } = useSearchBarAnimation(animatedValue);
+  const { searchBarMarginTop, filterBarTop } =
+    useSearchBarAnimation(animatedValue);
 
   const hasSearch = !!searchFilters.name;
   const onChangeText = (query: string) => updateSearchFilter("name", query);
   const onClearSearch = () => updateSearchFilter("name", "");
+  const onOpenSearchPanel = () => {
+    onShowSearchPanel();
+    Keyboard.dismiss();
+  };
 
   const [appliedHiddenSearchFilterName, appliedHiddenFilterSearchValue] =
     (Object.entries(searchFilters).find(
@@ -58,44 +56,52 @@ export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({
   const hasHiddenFiltersApplied = !!appliedHiddenSearchFilterName;
 
   return (
-    <Animated.View style={[{ marginTop }, styles.searchBarWrapper]}>
-      <AnimatedTextInput
-        clearButtonMode="unless-editing"
-        placeholder="Search for waterbody"
-        onChangeText={onChangeText}
-        value={searchFilters.name}
-        maxLength={15}
-        style={{ backgroundColor: theme.colors.surface }}
-        left={<TextInput.Icon icon="magnify" />}
-        right={
-          hasSearch && <TextInput.Icon icon="close" onPress={onClearSearch} />
-        }
-      />
-      {hasHiddenFiltersApplied ? (
-        <Button
-          icon="close"
-          mode="contained"
-          style={styles.filterButton}
-          onPress={() =>
-            updateSearchFilter(appliedHiddenSearchFilterName, undefined)
+    <>
+      <Animated.View
+        style={[{ marginTop: searchBarMarginTop }, styles.searchBarWrapper]}
+      >
+        <AnimatedTextInput
+          clearButtonMode="unless-editing"
+          placeholder="Search for waterbody"
+          onChangeText={onChangeText}
+          value={searchFilters.name}
+          maxLength={15}
+          style={{ backgroundColor: theme.colors.surface }}
+          left={<TextInput.Icon icon="magnify" />}
+          right={
+            hasSearch && <TextInput.Icon icon="close" onPress={onClearSearch} />
           }
-        >
-          {mapFilterDisplayValue(
-            appliedHiddenSearchFilterName,
-            appliedHiddenFilterSearchValue
-          )}
-        </Button>
-      ) : (
-        <Button
-          icon="filter-variant"
-          mode="contained-tonal"
-          style={styles.filterButton}
-          onPress={() => onShowSearchPanel()}
-        >
-          Filters
-        </Button>
-      )}
-    </Animated.View>
+        />
+      </Animated.View>
+      <Animated.View
+        style={{ top: filterBarTop, position: "absolute", right: 0, zIndex: 1 }}
+      >
+        {hasHiddenFiltersApplied ? (
+          <Button
+            icon="close"
+            mode="contained"
+            style={styles.filterButton}
+            onPress={() =>
+              updateSearchFilter(appliedHiddenSearchFilterName, undefined)
+            }
+          >
+            {mapFilterDisplayValue(
+              appliedHiddenSearchFilterName,
+              appliedHiddenFilterSearchValue
+            )}
+          </Button>
+        ) : (
+          <Button
+            icon="filter-variant"
+            mode="contained-tonal"
+            style={styles.filterButton}
+            onPress={onOpenSearchPanel}
+          >
+            Filters
+          </Button>
+        )}
+      </Animated.View>
+    </>
   );
 };
 
