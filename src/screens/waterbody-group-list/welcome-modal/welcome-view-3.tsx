@@ -13,6 +13,10 @@ export const WelcomeView3: React.FC = () => {
           )}
         />
         <List.Item
+          title="Fish Retention"
+          left={(props) => <List.Icon {...props} icon="check-outline" />}
+        />
+        <List.Item
           title="Zone"
           left={(props) => <List.Icon {...props} icon="map-outline" />}
         />
