@@ -84,6 +84,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
               />
               <List.Item
                 title={<Text variant="titleLarge">No results found</Text>}
+                description="Use the default fish management zone regulations"
               />
             </List.Section>
           )}
