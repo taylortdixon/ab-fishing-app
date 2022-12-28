@@ -1,8 +1,15 @@
 import { Linking, StyleSheet } from "react-native";
-import { Button, Dialog, Paragraph, Portal } from "react-native-paper";
+import {
+  Button,
+  Dialog,
+  Paragraph,
+  Portal,
+  useTheme,
+} from "react-native-paper";
 import { useRegulationsContext } from "../../components/regulations.context";
 
 export const ConfirmationModal = () => {
+  const theme = useTheme();
   const { confirmed, updateConfirmation } = useRegulationsContext();
 
   return (
@@ -22,6 +29,7 @@ export const ConfirmationModal = () => {
             onPress={() =>
               Linking.openURL("https://albertaregulations.ca/fishingregs/")
             }
+            textColor={theme.colors.secondary}
           >
             View Regulations
           </Button>

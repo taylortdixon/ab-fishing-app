@@ -9,11 +9,13 @@ import { RegulationsDefinition } from "../../regulations/waterbody.type";
 
 const CONFIRMATION_STORAGE_KEY = "@confirmation";
 const REGULATIONS_STORAGE_KEY = "@regulations";
+const WELCOMED_STORAGE_KEY = "@welcomed";
 const REGULATIONS_REMOTE_URL = "https://abfishing.ca/regulations.json";
 
 export const useAppInitialization = () => {
   const [initialized, setInitialized] = useState(false);
-  const [confirmed, setConfirmed] = useState(false);
+  const [confirmed, setConfirmed] = useState(true);
+  const [welcomed, setWelcomed] = useState(true);
 
   const [regulations, setRegulations] =
     useState<RegulationsDefinition>(undefined);
@@ -103,9 +105,13 @@ export const useAppInitialization = () => {
           CONFIRMATION_STORAGE_KEY
         );
 
+        const storedWelcomed = await AsyncStorage.getItem(WELCOMED_STORAGE_KEY);
+
         setConfirmed(!!storedConfirmation);
+        setWelcomed(!!storedWelcomed);
       } catch (e) {
         setConfirmed(true);
+        setWelcomed(true);
       }
     }
 
@@ -121,10 +127,21 @@ export const useAppInitialization = () => {
     }
   };
 
+  const updateWelcomed = async () => {
+    try {
+      await AsyncStorage.setItem(WELCOMED_STORAGE_KEY, "true");
+    } catch (e) {
+    } finally {
+      setWelcomed(true);
+    }
+  };
+
   return {
     initialized,
     regulations: regulations,
     confirmed,
+    welcomed,
     updateConfirmation,
+    updateWelcomed,
   } as const;
 };

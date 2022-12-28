@@ -24,8 +24,14 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const { initialized, regulations, confirmed, updateConfirmation } =
-    useAppInitialization();
+  const {
+    initialized,
+    regulations,
+    confirmed,
+    welcomed,
+    updateConfirmation,
+    updateWelcomed,
+  } = useAppInitialization();
 
   const onLayoutRootView = useCallback(async () => {
     if (initialized) {
@@ -42,7 +48,13 @@ export default function App() {
       <PaperProvider theme={AppTheme}>
         <NavigationContainer onReady={onLayoutRootView}>
           <RegulationsContext.Provider
-            value={{ regulations, confirmed, updateConfirmation }}
+            value={{
+              regulations,
+              confirmed,
+              welcomed,
+              updateConfirmation,
+              updateWelcomed,
+            }}
           >
             <Stack.Navigator
               screenOptions={{

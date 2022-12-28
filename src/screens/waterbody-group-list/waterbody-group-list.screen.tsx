@@ -11,6 +11,7 @@ import { ConfirmationModal } from "./confirmation-modal";
 import { WaterbodyGroup } from "../../../regulations/waterbody.type";
 import { useFilteredWaterbodyGroups } from "./waterbody-group-list-filters.hook";
 import { MAX_SEARCH_BAR_HEIGHT } from "./search-bar-animation.hook";
+import { WelcomeModal } from "./welcome-modal/welcome-modal";
 
 type WaterbodyGroupListProps = NativeStackScreenProps<
   RootStackParamList,
@@ -95,6 +96,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
         updateSearchFilter={updateSearchFilter}
       />
       <ConfirmationModal />
+      <WelcomeModal />
     </SafeAreaView>
   );
 };
