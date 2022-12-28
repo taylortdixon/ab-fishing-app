@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ScrollView, StyleSheet } from "react-native";
 import { Button, Dialog, List, Portal, RadioButton } from "react-native-paper";
 
 export type SelectableFilterItemOption = {
@@ -32,20 +33,24 @@ export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
       <Portal>
         <Dialog visible={dialogOpen} onDismiss={() => setDialogOpen(false)}>
           <Dialog.Title>Choose an option</Dialog.Title>
-          <Dialog.Content>
-            <RadioButton.Group
-              onValueChange={(value) => setSelectedValue(value)}
-              value={selectedValue}
-            >
-              {options.map((option) => (
-                <RadioButton.Item
-                  key={option.value}
-                  label={option.label}
-                  value={option.value}
-                />
-              ))}
-            </RadioButton.Group>
-          </Dialog.Content>
+          <Dialog.ScrollArea style={styles.scrollArea}>
+            <ScrollView>
+              <Dialog.Content>
+                <RadioButton.Group
+                  onValueChange={(value) => setSelectedValue(value)}
+                  value={selectedValue}
+                >
+                  {options.map((option) => (
+                    <RadioButton.Item
+                      key={option.value}
+                      label={option.label}
+                      value={option.value}
+                    />
+                  ))}
+                </RadioButton.Group>
+              </Dialog.Content>
+            </ScrollView>
+          </Dialog.ScrollArea>
           <Dialog.Actions>
             <Button onPress={() => setDialogOpen(false)}>Cancel</Button>
             <Button
@@ -60,3 +65,9 @@ export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  scrollArea: {
+    maxHeight: 600,
+  },
+});

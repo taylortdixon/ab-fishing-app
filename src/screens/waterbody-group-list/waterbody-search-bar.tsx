@@ -3,6 +3,8 @@ import { Animated, Keyboard, StyleSheet } from "react-native";
 import { useSearchBarAnimation } from "./search-bar-animation.hook";
 import { withAnimated } from "../../components/with-animated";
 import { SearchFilters } from "./waterbody-group-list-filters.hook";
+import { FISH_LIMIT_LABELS } from "../../constants/fish-limit-labels.const";
+import { FishLimit } from "../../../regulations/waterbody.type";
 
 const AnimatedTextInput = withAnimated(TextInput);
 
@@ -19,6 +21,10 @@ function mapFilterDisplayValue<
 >(filterName: K, filterValue: P) {
   if (filterName === "isOpenSeason") {
     return "Open Season";
+  }
+
+  if (filterName === "fishRetention") {
+    return FISH_LIMIT_LABELS[filterValue as FishLimit];
   }
 
   if (filterName === "waterbodyType") {

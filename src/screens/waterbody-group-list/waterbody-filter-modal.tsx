@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
 import { List, Modal, Portal, Text } from "react-native-paper";
+import { FishLimit } from "../../../regulations/waterbody.type";
+import { FISH_LIMIT_LABELS } from "../../constants/fish-limit-labels.const";
 import {
   SelectableFilterItem,
   SelectableFilterItemOption,
@@ -38,6 +40,15 @@ const waterbodyTypeOptions: SelectableFilterItemOption[] = [
   { label: "Rivers", value: "Rivers" },
 ];
 
+const fishRetentionOptions: SelectableFilterItemOption[] = Object.entries(
+  FISH_LIMIT_LABELS
+)
+  .filter(
+    ([value]: [FishLimit, string]) =>
+      value !== "cisco" && value !== "trout_total"
+  )
+  .map<SelectableFilterItemOption>(([value, label]) => ({ label, value }));
+
 export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
   searchFilters,
   visible,
@@ -69,6 +80,12 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
               <List.Icon {...props} icon="calendar-check-outline" />
             )}
             onPress={() => onFilterSelect("isOpenSeason", true)}
+          />
+          <SelectableFilterItem
+            icon="check-outline"
+            title="Fish Retention"
+            onSubmit={(value) => onFilterSelect("fishRetention", value)}
+            options={fishRetentionOptions}
           />
           <SelectableFilterItem
             icon="map-outline"

@@ -2,7 +2,7 @@ import { View, Linking } from "react-native";
 import { List } from "react-native-paper";
 import { FishLimit, Waterbody } from "../../../regulations/waterbody.type";
 import { fishLimitsIconMap } from "../../components/fish-icons/fish-icons";
-import { FISH_LIMIT_LABELS } from "./waterbody-details.constants";
+import { FISH_LIMIT_LABELS } from "../../constants/fish-limit-labels.const";
 
 type WaterbodyDetailsRegulationListProps = {
   waterbody: Waterbody;

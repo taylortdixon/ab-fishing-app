@@ -1,5 +1,9 @@
 import dayjs from "dayjs";
-import { Waterbody, WaterbodyGroup } from "../../../regulations/waterbody.type";
+import {
+  FishLimit,
+  Waterbody,
+  WaterbodyGroup,
+} from "../../../regulations/waterbody.type";
 import { SearchFilters } from "./waterbody-group-list-filters.hook";
 
 const REGULATIONS_CUTOFF_MONTH_INDEX = 2; // March
@@ -47,6 +51,30 @@ const filterWaterbodyType = (
   return currentFishManagementZone.endsWith(selectedWaterbodyType);
 };
 
+const filterFishRetention = (
+  currentFishLimits: Waterbody["fish_limits"],
+  selectedFishRetention: FishLimit
+) => {
+  const fishLimit = currentFishLimits[selectedFishRetention];
+
+  if (!fishLimit) {
+    if (selectedFishRetention === "rainbow_trout") {
+      return filterFishRetention(currentFishLimits, "trout_total");
+    }
+
+    return false;
+  }
+
+  if (fishLimit.trim().match(/^0 fish$/i)) {
+    return false;
+  }
+  if (fishLimit.trim().match(/^0 trout$/i)) {
+    return false;
+  }
+
+  return true;
+};
+
 export const filterWaterbodyGroup =
   (searchFilters: SearchFilters) => (waterbodyGroup: WaterbodyGroup) => {
     let results = [];
@@ -63,6 +91,17 @@ export const filterWaterbodyGroup =
       results.push(
         waterbodyGroup.waterbodies.some((waterbody) =>
           filterOpenSeason(waterbody.season)
+        )
+      );
+    }
+
+    if (searchFilters.fishRetention) {
+      results.push(
+        waterbodyGroup.waterbodies.some((waterbody) =>
+          filterFishRetention(
+            waterbody.fish_limits,
+            searchFilters.fishRetention
+          )
         )
       );
     }

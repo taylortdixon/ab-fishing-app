@@ -1,10 +1,12 @@
 import { useMemo, useState } from "react";
+import { FishLimit } from "../../../regulations/waterbody.type";
 import { useRegulationsContext } from "../../components/regulations.context";
 import { filterWaterbodyGroup } from "./waterbody-group-list.utils";
 
 export type SearchFilters = {
   name?: string;
   isOpenSeason?: boolean;
+  fishRetention?: FishLimit;
   zone?: string;
   waterbodyType?: string;
 };
