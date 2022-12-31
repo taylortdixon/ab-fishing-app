@@ -27,7 +27,7 @@ export const WaterbodyDetailsRegulationList: React.FC<
         left={() => DummyIcon}
       />
       <List.Item
-        title="Bait Ban"
+        title="Bait Restriction"
         description={waterbody.bait_ban}
         left={() => DummyIcon}
       />
@@ -52,7 +52,7 @@ export const WaterbodyDetailsRegulationList: React.FC<
           <List.Item
             key={limitName}
             title={FISH_LIMIT_LABELS[limitName]}
-            description={limit}
+            description={`Limit ${limit}`}
             left={() => <Icon width={50} height={50} />}
           />
         );

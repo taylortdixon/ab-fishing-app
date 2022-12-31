@@ -37,7 +37,7 @@ export const WelcomeModal = () => {
 
   return (
     <Portal>
-      <Dialog visible={true}>
+      <Dialog visible={true} dismissable onDismiss={handleWelcomeComplete}>
         <Dialog.Title>Welcome to AB Fishing</Dialog.Title>
         <Dialog.ScrollArea
           style={{

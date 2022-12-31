@@ -34,6 +34,10 @@ function mapFilterDisplayValue<
   if (filterName === "zone") {
     return `Zone ${filterValue}`;
   }
+
+  if (filterName === "baitRestrictions") {
+    return filterValue === "bait_restricted" ? "Bait banned" : "Bait allowed";
+  }
 }
 
 export const WaterbodySearchBar: React.FC<WaterbodySearchBarProps> = ({

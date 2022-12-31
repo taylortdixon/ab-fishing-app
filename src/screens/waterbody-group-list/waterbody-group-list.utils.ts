@@ -51,6 +51,17 @@ const filterWaterbodyType = (
   return currentFishManagementZone.endsWith(selectedWaterbodyType);
 };
 
+const filterBaitRestriction = (
+  currentBaitRestriction: string,
+  selectedBaitRestrictions: SearchFilters["baitRestrictions"]
+) => {
+  const hasBaitBan = !!currentBaitRestriction.trim().match(/bait ban/i);
+
+  return selectedBaitRestrictions === "bait_restricted"
+    ? hasBaitBan
+    : !hasBaitBan;
+};
+
 const filterFishRetention = (
   currentFishLimits: Waterbody["fish_limits"],
   selectedFishRetention: FishLimit
@@ -125,5 +136,15 @@ export const filterWaterbodyGroup =
       );
     }
 
+    if (searchFilters.baitRestrictions) {
+      results.push(
+        waterbodyGroup.waterbodies.some((waterbody) =>
+          filterBaitRestriction(
+            waterbody.bait_ban,
+            searchFilters.baitRestrictions
+          )
+        )
+      );
+    }
     return results.every((result) => !!result);
   };

@@ -12,12 +12,12 @@ export const WelcomeView1: React.FC = () => {
       <List.Section style={{ marginHorizontal: 16 }}>
         <List.Item
           title="Walleye"
-          description="2 fish"
+          description="Limit 2 fish"
           left={() => <WalleyeIcon width={50} height={50} />}
         />
         <List.Item
           title="Pike"
-          description="1 over 63 cm"
+          description="Limit 1 over 63 cm"
           left={() => <PikeIcon width={50} height={50} />}
         />
       </List.Section>

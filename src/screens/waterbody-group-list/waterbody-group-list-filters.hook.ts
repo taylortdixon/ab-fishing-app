@@ -6,6 +6,7 @@ import { filterWaterbodyGroup } from "./waterbody-group-list.utils";
 export type SearchFilters = {
   name?: string;
   isOpenSeason?: boolean;
+  baitRestrictions?: "bait_allowed" | "bait_restricted";
   fishRetention?: FishLimit;
   zone?: string;
   waterbodyType?: string;

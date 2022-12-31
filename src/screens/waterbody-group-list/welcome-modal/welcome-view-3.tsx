@@ -17,6 +17,10 @@ export const WelcomeView3: React.FC = () => {
           left={(props) => <List.Icon {...props} icon="check-outline" />}
         />
         <List.Item
+          title="Bait Restriction"
+          left={(props) => <List.Icon {...props} icon="hook" />}
+        />
+        <List.Item
           title="Zone"
           left={(props) => <List.Icon {...props} icon="map-outline" />}
         />

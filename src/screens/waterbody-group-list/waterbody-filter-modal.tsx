@@ -40,6 +40,11 @@ const waterbodyTypeOptions: SelectableFilterItemOption[] = [
   { label: "Rivers", value: "Rivers" },
 ];
 
+const baitBanOptions: SelectableFilterItemOption[] = [
+  { label: "Bait allowed", value: "bait_allowed" },
+  { label: "Bait banned", value: "bait_restricted" },
+];
+
 const fishRetentionOptions: SelectableFilterItemOption[] = Object.entries(
   FISH_LIMIT_LABELS
 )
@@ -88,6 +93,12 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
             options={fishRetentionOptions}
           />
           <SelectableFilterItem
+            icon="hook"
+            title="Bait Restriction"
+            onSubmit={(value) => onFilterSelect("baitRestrictions", value)}
+            options={baitBanOptions}
+          />
+          <SelectableFilterItem
             icon="map-outline"
             title="Zone"
             onSubmit={(value) => onFilterSelect("zone", value)}
@@ -116,7 +127,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: 300,
+    height: 350,
   },
   header: {
     marginBottom: 16,
