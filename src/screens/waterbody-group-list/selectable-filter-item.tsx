@@ -68,6 +68,6 @@ export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
 
 const styles = StyleSheet.create({
   scrollArea: {
-    maxHeight: 600,
+    maxHeight: 400,
   },
 });
