@@ -95,6 +95,7 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
           <SelectableFilterItem
             icon="hook"
             title="Bait Restriction"
+            message="Be sure to read details, some waterbodies may have restrictions on type of bait used."
             onSubmit={(value) => onFilterSelect("baitRestrictions", value)}
             options={baitBanOptions}
           />

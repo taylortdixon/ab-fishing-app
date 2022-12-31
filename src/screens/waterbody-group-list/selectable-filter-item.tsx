@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { ScrollView, StyleSheet } from "react-native";
-import { Button, Dialog, List, Portal, RadioButton } from "react-native-paper";
+import {
+  Button,
+  Dialog,
+  List,
+  Portal,
+  RadioButton,
+  Text,
+} from "react-native-paper";
 
 export type SelectableFilterItemOption = {
   label: string;
@@ -10,6 +17,7 @@ export type SelectableFilterItemOption = {
 type SelectableFilterItemProps = {
   title: string;
   icon: string;
+  message?: string;
   options: SelectableFilterItemOption[];
   onSubmit: (newValue: any) => void;
 };
@@ -17,6 +25,7 @@ type SelectableFilterItemProps = {
 export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
   icon,
   title,
+  message,
   options,
   onSubmit,
 }) => {
@@ -48,6 +57,11 @@ export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
                     />
                   ))}
                 </RadioButton.Group>
+                {message && (
+                  <Text variant="bodySmall" style={styles.message}>
+                    {message}
+                  </Text>
+                )}
               </Dialog.Content>
             </ScrollView>
           </Dialog.ScrollArea>
@@ -67,6 +81,7 @@ export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
 };
 
 const styles = StyleSheet.create({
+  message: { marginTop: 20 },
   scrollArea: {
     maxHeight: 400,
   },
