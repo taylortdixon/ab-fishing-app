@@ -1,6 +1,6 @@
 import { List, Text } from "react-native-paper";
-import { Animated, View } from "react-native";
-import React, { useState, useRef, useMemo } from "react";
+import { Animated, FlatList, View } from "react-native";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import { AppBar } from "../../components/app-bar";
 import { WaterbodyFilterModal } from "./waterbody-filter-modal";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
@@ -25,7 +25,12 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
     useFilteredWaterbodyGroups();
 
   const [visible, setVisible] = useState(false);
+  const waterbodyListRef = useRef<FlatList<WaterbodyGroup>>();
   let scrollOffsetY = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    waterbodyListRef.current?.scrollToOffset({ animated: false, offset: 0 });
+  }, [searchFilters]);
 
   const showDialog = () => setVisible(true);
   const hideDialog = () => setVisible(false);
@@ -51,6 +56,7 @@ export const WaterbodyGroupList: React.FC<WaterbodyGroupListProps> = ({
 
         <Animated.FlatList
           data={flatListData}
+          ref={waterbodyListRef}
           renderItem={({ item: regulation }) => {
             if (!regulation) {
               return (
