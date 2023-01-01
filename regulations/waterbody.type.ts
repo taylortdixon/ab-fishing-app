@@ -37,4 +37,5 @@ export type WaterbodyGroupMap = Record<string, WaterbodyGroup>;
 export type RegulationsDefinition = {
   version: string;
   waterbody_groups: WaterbodyGroupMap;
+  message?: string;
 };

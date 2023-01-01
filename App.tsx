@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as PaperProvider, Snackbar } from "react-native-paper";
 import { AppTheme } from "./app-theme";
 import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
@@ -77,6 +77,11 @@ export default function App() {
             </Stack.Navigator>
           </RegulationsContext.Provider>
         </NavigationContainer>
+        {regulations.message && (
+          <Snackbar onDismiss={() => {}} visible>
+            {regulations.message}
+          </Snackbar>
+        )}
       </PaperProvider>
     </SafeAreaProvider>
   );
