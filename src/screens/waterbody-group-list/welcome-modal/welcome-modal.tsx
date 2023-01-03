@@ -37,15 +37,14 @@ export const WelcomeModal = () => {
 
   return (
     <Portal>
-      <Dialog visible={true} dismissable onDismiss={handleWelcomeComplete}>
+      <Dialog
+        visible={true}
+        dismissable
+        onDismiss={handleWelcomeComplete}
+        style={welcomeModalStyles.dialog}
+      >
         <Dialog.Title>Welcome to AB Fishing</Dialog.Title>
-        <Dialog.ScrollArea
-          style={{
-            paddingHorizontal: 0,
-            borderTopColor: "transparent",
-            borderBottomColor: "transparent",
-          }}
-        >
+        <Dialog.ScrollArea style={welcomeModalStyles.dialogScrollArea}>
           <ScrollView>
             <Dialog.Content>
               <ProgressBar
