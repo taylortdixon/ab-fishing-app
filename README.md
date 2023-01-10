@@ -52,11 +52,11 @@
 
 ## About The Project
 
-![Product Image](assets/list.png)
+<img src="assets/list.png" alt="drawing" height="500"/>
 
 There are many lakes and rivers in Alberta to fish in. Each waterbody has it's own disinct rules on when to fish, what can be kept, and what kind of bait to use.
 
-![Details Image](assets/details.png)
+<img src="assets/details.png" alt="drawing" height="500"/>
 
 These regulations are set and published by the [Alberta Government](https://albertaregulations.ca/fishingregs/). However, the format that it's published is a pdf version of a printed magazine, which is not very friendly to a user reading on a screen or phone. Furthermore, trip planning or comparing one lake to another is a real pain.
 
