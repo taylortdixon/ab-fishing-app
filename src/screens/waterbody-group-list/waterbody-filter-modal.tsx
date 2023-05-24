@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { List, Modal, Portal, Text } from "react-native-paper";
+import { StyleSheet, Image, View } from "react-native";
+import { List, Modal, Portal, Text, useTheme } from "react-native-paper";
 import { FishLimit } from "../../../regulations/waterbody.type";
 import { FISH_LIMIT_LABELS } from "../../constants/fish-limit-labels.const";
 import {
@@ -60,6 +60,8 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
   onClose,
   updateSearchFilter,
 }) => {
+  const theme = useTheme();
+
   const onFilterSelect: WaterbodyFilterModalProps["updateSearchFilter"] = (
     name,
     value
@@ -74,10 +76,12 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
         visible={visible}
         onDismiss={onClose}
         contentContainerStyle={styles.modalContent}
+        theme={theme}
       >
         <Text variant="headlineSmall" style={styles.header}>
           Filter by
         </Text>
+
         <List.Section>
           <List.Item
             title="Open Season"
@@ -102,6 +106,18 @@ export const WaterbodyFilterModal: React.FC<WaterbodyFilterModalProps> = ({
           <SelectableFilterItem
             icon="map-outline"
             title="Zone"
+            subtitle={
+              <List.Accordion
+                title="View Map"
+                style={{ backgroundColor: theme.colors.elevation.level2 }}
+              >
+                <Image
+                  source={require("../../static/map.png")}
+                  resizeMode="stretch"
+                  style={styles.zoneMapImage}
+                />
+              </List.Accordion>
+            }
             onSubmit={(value) => onFilterSelect("zone", value)}
             options={fishManagementZoneOptions}
           />
@@ -132,5 +148,9 @@ const styles = StyleSheet.create({
   },
   header: {
     marginBottom: 16,
+  },
+  zoneMapImage: {
+    height: 500,
+    maxWidth: "100%",
   },
 });

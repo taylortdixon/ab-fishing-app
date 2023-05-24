@@ -16,6 +16,7 @@ export type SelectableFilterItemOption = {
 
 type SelectableFilterItemProps = {
   title: string;
+  subtitle?: React.ReactNode;
   icon: string;
   message?: string;
   options: SelectableFilterItemOption[];
@@ -25,6 +26,7 @@ type SelectableFilterItemProps = {
 export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
   icon,
   title,
+  subtitle,
   message,
   options,
   onSubmit,
@@ -42,9 +44,11 @@ export const SelectableFilterItem: React.FC<SelectableFilterItemProps> = ({
       <Portal>
         <Dialog visible={dialogOpen} onDismiss={() => setDialogOpen(false)}>
           <Dialog.Title>Choose an option</Dialog.Title>
+
           <Dialog.ScrollArea style={styles.scrollArea}>
             <ScrollView>
               <Dialog.Content>
+                {subtitle}
                 <RadioButton.Group
                   onValueChange={(value) => setSelectedValue(value)}
                   value={selectedValue}
