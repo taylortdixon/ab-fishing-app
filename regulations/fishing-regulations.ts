@@ -1,6 +1,6 @@
 import { Waterbody, WaterbodyGroupMap } from "./waterbody.type";
 
-export const REGULATIONS_VERSION = "April 10, 2022";
+export const REGULATIONS_VERSION = "April 1, 2023";
 
 export const regulations: Waterbody[] = [
   {
@@ -85,7 +85,7 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
@@ -191,7 +191,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail: "",
     fish_limits: {
       walleye: "",
-      northern_pike: "1 over 63 cm",
+      northern_pike: "1 fish",
       yellow_perch: "15 fish",
       lake_trout: "",
       lake_whitefish: "",
@@ -407,7 +407,7 @@ export const regulations: Waterbody[] = [
     waterbody: "Badger Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "0 fish",
+      walleye: "1 fish 50-55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       mountain_whitefish: "",
@@ -457,9 +457,9 @@ export const regulations: Waterbody[] = [
     waterbody: "Baptiste River",
     waterbody_detail: "Mainstem only",
     fish_limits: {
-      walleye: "3 over50 cm",
+      walleye: "3 over 50 cm",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
@@ -942,7 +942,7 @@ export const regulations: Waterbody[] = [
     id: "belly-river-270f4",
     season: "Closed Sept 1 to June 15",
     waterbody: "Belly River",
-    waterbody_detail: "Mainstem upstream of Sec. Rd. 800 and \ntributaries",
+    waterbody_detail: "Mainstem upstream of Sec. Rd. 800 and tributaries",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -978,7 +978,7 @@ export const regulations: Waterbody[] = [
     id: "belly-river-5337c",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Belly River",
-    waterbody_detail: "Mainstem and tributaries; downstream of Sec. \nRd. 800",
+    waterbody_detail: "Mainstem and tributaries; downstream of Sec. Rd. 800",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -1134,7 +1134,7 @@ export const regulations: Waterbody[] = [
     fish_management_zone: "NB1-Lakes",
     id: "big-johnson-chump-eaf70",
     season: "Open May 15 to Mar 31",
-    waterbody: "Big Johnson (Chump) Lake ",
+    waterbody: "Big Johnson (Chump) Lake",
     waterbody_detail: "",
     fish_limits: {
       walleye: "0 fish",
@@ -1165,15 +1165,15 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "bighorn-river-e67a7",
+    id: "bighorn-river-849d6",
     season: "Open June 16 to Aug 31",
     waterbody: "Bighorn River",
-    waterbody_detail: "Mainstem and tributaries upstream of Crescent  Falls",
+    waterbody_detail: "Mainstem and tributaries upstream of Crescent Falls",
     fish_limits: {
       walleye: "",
       northern_pike: "",
       mountain_whitefish: "",
-      cutthroat_trout: "over 30cm",
+      cutthroat_trout: "over 30 cm",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
@@ -1183,10 +1183,10 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "bighorn-river-289a3",
+    id: "bighorn-river-e8f4b",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Bighorn River",
-    waterbody_detail: "Mainstem and tributaries upstream of Crescent  Falls",
+    waterbody_detail: "Mainstem and tributaries upstream of Crescent Falls",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -1201,15 +1201,15 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "bighorn-river-1daa1",
+    id: "bighorn-river-52a61",
     season: "Open June 16 to Aug 31",
     waterbody: "Bighorn River",
-    waterbody_detail: "Mainstem and tributaries downstream of  Crescent Falls",
+    waterbody_detail: "Mainstem and tributaries downstream of Crescent Falls",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "over 35cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "over 35 cm",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
@@ -1219,10 +1219,10 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "bighorn-river-49d43",
+    id: "bighorn-river-fa135",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Bighorn River",
-    waterbody_detail: "Mainstem and tributaries downstream of  Crescent Falls",
+    waterbody_detail: "Mainstem and tributaries downstream of Crescent Falls",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -1325,11 +1325,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "blackstone-river-e7057",
+    id: "blackstone-river-90c74",
     season: "Closed All Year",
     waterbody: "Blackstone River",
     waterbody_detail:
-      "Mainstem and tributaries upstream of Mons  Creek including Mons Creek",
+      "Mainstem and tributaries upstream of Mons Creek including Mons Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -1338,16 +1338,17 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "blackstone-river-afdef",
+    id: "blackstone-river-4189f",
     season: "Open June 16 to Oct 31",
     waterbody: "Blackstone River",
     waterbody_detail:
-      "Mainstem downstream of Mons Creek and  tributaries (except Rundell Creek)",
+      "Mainstem downstream of Mons Creek and tributaries (except Rundell Creek)",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -1649,16 +1650,16 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "brazeau-river-c8f2e",
+    id: "brazeau-river-d3f19",
     season: "Open June 16 to Aug 31",
     waterbody: "Brazeau River",
     waterbody_detail:
-      "Mainstem upstream of Forestry Trunk Road  (bridge at 6-16-45-18-W5) and tributaries  (except Cardinal River), outside ofJasper  National Park",
+      "Mainstem upstream of Forestry Trunk Road (bridge at 6-16-45-18-W5) and tributaries (except Cardinal River), outside of Jasper National Park",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "over 30cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "over 30 cm",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
@@ -1668,11 +1669,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "brazeau-river-c7a1c",
+    id: "brazeau-river-b1d6c",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Brazeau River",
     waterbody_detail:
-      "Mainstem upstream of Forestry Trunk Road  (bridge at 6-16-45-18-W5) and tributaries  (except Cardinal River), outside ofJasper  National Park",
+      "Mainstem upstream of Forestry Trunk Road (bridge at 6-16-45-18-W5) and tributaries (except Cardinal River), outside of Jasper National Park",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -1687,16 +1688,16 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "brazeau-river-ef4c6",
+    id: "brazeau-river-2b773",
     season: "Open Apr 1 to Oct 31",
     waterbody: "Brazeau River",
     waterbody_detail:
-      "Mainstem downstream of the Forestry Trunk  Road (bridge at 6-16-45-18-W5) to the Brazeau  Reservoir",
+      "Mainstem downstream of the Forestry Trunk Road (bridge at 6-16-45-18-W5) to the Brazeau Reservoir",
     fish_limits: {
-      walleye: "3 over50 cm",
-      northern_pike: "3 over63 cm",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "over 35  cm",
+      walleye: "3 over 50 cm",
+      northern_pike: "3 over 63 cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "over 35 cm",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
@@ -1888,7 +1889,7 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "0 fish",
       northern_pike: "3 fish",
-      mountain_whitefish: "3 over30 cm",
+      mountain_whitefish: "3 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
@@ -2265,7 +2266,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "Castle River",
     waterbody_detail:
-      "Mainstem from Hwy. 3 to West Castle River and \nincludes tributaries except Mill, Beaver Mines, \nand Screwdriver creeks and Carbondale River",
+      "Mainstem from Hwy. 3 to West Castle River and includes tributaries except Mill, Beaver Mines, and Screwdriver creeks and Carbondale River",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -2548,7 +2549,7 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
@@ -2594,15 +2595,15 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "clearwater-river-463ec",
+    id: "clearwater-river-5dee6",
     season: "Open Apr 1 to Aug 31",
     waterbody: "Clearwater River",
     waterbody_detail:
-      "Mainstem from the Banff National Park  boundary downstream to Timber Creek",
+      "Mainstem from the Banff National Park boundary downstream to Timber Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
@@ -2613,11 +2614,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "clearwater-river-623ca",
+    id: "clearwater-river-74b29",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Clearwater River",
     waterbody_detail:
-      "Mainstem from the Banff National Park  boundary downstream to Timber Creek",
+      "Mainstem from the Banff National Park boundary downstream to Timber Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -2632,11 +2633,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "clearwater-river-632c5",
+    id: "clearwater-river-7293f",
     season: "Closed All Year",
     waterbody: "Clearwater River",
     waterbody_detail:
-      "Tributaries from the Banff National Park  boundary downstream to and including Timber  Creek",
+      "Tributaries from the Banff National Park boundary downstream to and including Timber Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -2645,20 +2646,21 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "clearwater-river-c7e4c",
+    id: "clearwater-river-42fb2",
     season: "Open Apr 1 to Aug 31",
     waterbody: "Clearwater River",
     waterbody_detail:
-      "Mainstem from Timber Creek downstream to  the Forestry Trunk Road (bridge at 5-35-09-W5)  and tributaries (except Elk Creek)",
+      "Mainstem from Timber Creek downstream to the Forestry Trunk Road (bridge at 5-35-09-W5) and tributaries (except Elk Creek)",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
@@ -2669,11 +2671,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "clearwater-river-8da0d",
+    id: "clearwater-river-5aa71",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Clearwater River",
     waterbody_detail:
-      "Mainstem from Timber Creek downstream to  the Forestry Trunk Road (bridge at 5-35-09-W5)  and tributaries (except Elk Creek)",
+      "Mainstem from Timber Creek downstream to the Forestry Trunk Road (bridge at 5-35-09-W5) and tributaries (except Elk Creek)",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -2688,15 +2690,15 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "clearwater-river-7f5ac",
+    id: "clearwater-river-972ff",
     season: "Open Apr 1 to Oct 31",
     waterbody: "Clearwater River",
     waterbody_detail:
-      "Mainstem from Forestry Trunk Road (bridge  at 5-35-09-W5) downstream to the North  Saskatchewan River",
+      "Mainstem from Forestry Trunk Road (bridge at 5-35-09-W5) downstream to the North Saskatchewan River",
     fish_limits: {
-      walleye: "3 over50 cm",
+      walleye: "3 over 50 cm",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "10 fish",
       goldeye: "",
@@ -2760,29 +2762,30 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "cline-river-13ce6",
+    id: "cline-river-33556",
     season: "Open June 16 to Aug 31",
     waterbody: "Cline River",
     waterbody_detail:
-      "Mainstem and tributaries downstream to  the Highway 11 (Cline River) bridge except  tributaries to Coral Lake, Pinto Lake, all waterwithin the White Goat Wilderness Area and the  outlet of Pinto Lake for 1.5 km downstream.",
+      "Mainstem and tributaries downstream to the Highway 11 (Cline River) bridge except tributaries to Coral Lake, Pinto Lake, all water within the White Goat Wilderness Area and the outlet of Pinto Lake for 1.5 km downstream.",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "over 30  cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "over 30 cm",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "cline-river-cc33f",
+    id: "cline-river-8cf52",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Cline River",
     waterbody_detail:
-      "Mainstem and tributaries downstream to  the Highway 11 (Cline River) bridge except  tributaries to Coral Lake, Pinto Lake, all waterwithin the White Goat Wilderness Area and the  outlet of Pinto Lake for 1.5 km downstream.",
+      "Mainstem and tributaries downstream to the Highway 11 (Cline River) bridge except tributaries to Coral Lake, Pinto Lake, all water within the White Goat Wilderness Area and the outlet of Pinto Lake for 1.5 km downstream.",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -2791,6 +2794,24 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
+    },
+  },
+  {
+    bait_ban: "Bait allowed",
+    fish_management_zone: "NB1-Lakes",
+    id: "clyde-lake-eaf70",
+    season: "Open May 15 to Mar 31",
+    waterbody: "Clyde Lake",
+    waterbody_detail: "",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "1 fish",
+      yellow_perch: "15 fish",
+      lake_trout: "",
+      lake_whitefish: "",
+      burbot: "",
+      trout_total: "",
     },
   },
   {
@@ -3087,7 +3108,7 @@ export const regulations: Waterbody[] = [
     fish_management_zone: "NB1-Lakes",
     id: "crane-moore-lake-53998",
     season: "Open May 15 to Mar 31",
-    waterbody: "Crane (Moore) Lake ",
+    waterbody: "Crane (Moore) Lake",
     waterbody_detail: "Includes outlet stream",
     fish_limits: {
       walleye: "0 fish",
@@ -3468,6 +3489,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -3480,11 +3502,12 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -3502,6 +3525,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -3565,7 +3589,7 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "1 fish",
-      yellow_perch: "",
+      yellow_perch: "15 fish",
       lake_trout: "",
       lake_whitefish: "",
       burbot: "",
@@ -3787,6 +3811,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -3874,6 +3899,26 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "0 fish",
+    },
+  },
+  {
+    bait_ban: "Bait except bait fish allowed",
+    fish_management_zone: "ES1-Lakes",
+    id: "emerald-hart-lake-b7b30",
+    season: "Open All Year",
+    waterbody: "Emerald (Hart) Lake",
+    waterbody_detail: "SE-8-8-5-W5",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "",
+      yellow_perch: "",
+      lake_trout: "3 fish",
+      mountain_whitefish: "3 over 30 cm",
+      cutthroat_trout: "",
+      brook_trout: "",
+      dolly_varden: "",
+      rainbow_trout: "",
+      trout_total: "5 trout",
     },
   },
   {
@@ -3966,11 +4011,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "fall-creek-9ff4d",
+    id: "fall-creek-b9e3c",
     season: "Open June 16 to Oct 31",
     waterbody: "Fall Creek",
     waterbody_detail:
-      "Mainstem and tribuatries; Upstream of the falls  at 11-31-37-11-W5",
+      "Mainstem and tribuatries; Upstream of the falls at 11-31-37-11-W5",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -3979,16 +4024,17 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "fall-creek-4757f",
+    id: "fall-creek-1cf0f",
     season: "Closed All Year",
     waterbody: "Fall Creek",
     waterbody_detail:
-      "Mainstem and tributaries downstream of the  falls at 11-31-37-11-W5",
+      "Mainstem and tributaries downstream of the falls at 11-31-37-11-W5",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -3997,6 +4043,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -4009,11 +4056,12 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "3 over30 cm",
+      mountain_whitefish: "3 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -4600,7 +4648,7 @@ export const regulations: Waterbody[] = [
     id: "ghost-river-0dff9",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Ghost River",
-    waterbody_detail: "Mainstem including tributaries except Waiparous \nCreek",
+    waterbody_detail: "Mainstem including tributaries except Waiparous Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -4704,9 +4752,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "glover-birch-lake-427c1",
+    id: "glover-birch-lake-fe107",
     season: "Open May 15 to Mar 31",
     waterbody: "Glover (Birch) Lake",
     waterbody_detail: "79-5-W4",
@@ -5016,14 +5064,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "gregoire-willow-lake-59f4e",
+    id: "gregoire-willow-lake-f0be4",
     season: "Open May 15 to Mar 31",
     waterbody: "Gregoire (Willow) Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "0 or SHL tags",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -5034,16 +5082,16 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "grist-lake-59f4e",
+    id: "grist-lake-f0be4",
     season: "Open May 15 to Mar 31",
     waterbody: "Grist Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "0 fish",
       northern_pike: "0 fish",
-      yellow_perch: "0 fish",
+      yellow_perch: "",
       lake_trout: "1 fish 60-70 cm",
       lake_whitefish: "10 fish",
       burbot: "",
@@ -5383,7 +5431,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "Highwood River",
     waterbody_detail:
-      "Headwater originating at Storm Ck and Mist Ck \nconfluence downstream to Kananaskis Country \nboundary; Includes tributaries except Storm \nCreek",
+      "Headwater originating at Storm Ck and Mist Ck confluence downstream to Kananaskis Country boundary; Includes tributaries except Storm Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -5470,9 +5518,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "hooker-lake-c4c40",
+    id: "hooker-lake-a2fec",
     season: "Open All Year",
     waterbody: "Hooker Lake",
     waterbody_detail: "",
@@ -5809,11 +5857,12 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "0 fish",
       northern_pike: "3 fish",
-      mountain_whitefish: "3 over30 cm",
+      mountain_whitefish: "3 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -6048,7 +6097,7 @@ export const regulations: Waterbody[] = [
     season: "Open June 16 to Aug 31",
     waterbody: "Kananaskis River",
     waterbody_detail:
-      "Headwater downstream to Hwy. 1 including \ntributaries except Smith-Dorrien Creek",
+      "Headwater downstream to Hwy. 1 including tributaries except Smith-Dorrien Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -6168,9 +6217,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "kimowin-hook-lake-59f4e",
+    id: "kimowin-hook-lake-f0be4",
     season: "Open May 15 to Mar 31",
     waterbody: "Kimowin (Hook) Lake",
     waterbody_detail: "",
@@ -6205,9 +6254,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "kirby-sterner-lake-686aa",
+    id: "kirby-sterner-lake-948c5",
     season: "Open May 15 to Mar 31",
     waterbody: "Kirby (Sterner) Lake",
     waterbody_detail: "75-5-W4",
@@ -6429,14 +6478,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "lake-athabasca-c4c40",
+    id: "lake-athabasca-a2fec",
     season: "Open All Year",
     waterbody: "Lake Athabasca",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "3 fish",
@@ -6477,7 +6526,7 @@ export const regulations: Waterbody[] = [
       yellow_perch: "",
       lake_trout: "",
       mountain_whitefish: "",
-      cutthroat_trout: "2 fish",
+      cutthroat_trout: "",
       burbot: "",
       rainbow_trout: "",
       trout_total: "2 trout",
@@ -6496,7 +6545,7 @@ export const regulations: Waterbody[] = [
       yellow_perch: "",
       lake_trout: "",
       mountain_whitefish: "",
-      cutthroat_trout: "2 fish ",
+      cutthroat_trout: " ",
       burbot: "",
       rainbow_trout: "",
       trout_total: "2 trout",
@@ -6670,9 +6719,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "leggo-lake-c4c40",
+    id: "leggo-lake-a2fec",
     season: "Open All Year",
     waterbody: "Leggo Lake",
     waterbody_detail: "",
@@ -6688,14 +6737,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "leland-lakes-c4c40",
+    id: "leland-lakes-a2fec",
     season: "Open All Year",
     waterbody: "Leland Lakes",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "3 fish",
@@ -6828,14 +6877,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "limon-lake-a3c42",
+    id: "limon-lake-381b4",
     season: "Open May 15 to Mar 31",
     waterbody: "Limon Lake",
     waterbody_detail: "Includes outlet",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -6870,7 +6919,7 @@ export const regulations: Waterbody[] = [
     waterbody: "Little Bow Lake Reservoir",
     waterbody_detail: "Includes inlet canal",
     fish_limits: {
-      walleye: "0 fish",
+      walleye: "1 fish 50-55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       mountain_whitefish: "",
@@ -6958,11 +7007,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "little-red-deer-b9241",
+    id: "little-red-deer-5dbb5",
     season: "Open Apr 1 to Oct 31",
     waterbody: "Little Red Deer River",
     waterbody_detail:
-      "Headwater downstream to Twp. Rd. 352  (Cottonwood Road) and tributaries except  Dogpound Creek. See PP2 for Little Red DeerRiver downstream of Twp. Rd. 352.",
+      "Headwater downstream to Twp. Rd. 352 (Cottonwood Road) and tributaries except Dogpound Creek. See PP2 for Little Red Deer River downstream of Twp. Rd. 352.",
     fish_limits: {
       walleye: "",
       northern_pike: "3 fish",
@@ -6971,6 +7020,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -7432,14 +7482,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "loutit-lake-c4c40",
+    id: "loutit-lake-a2fec",
     season: "Open All Year",
     waterbody: "Loutit Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -7539,6 +7589,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -7766,14 +7817,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "mcclelland-lake-c4c40",
+    id: "mcclelland-lake-a2fec",
     season: "Open All Year",
     waterbody: "Mcclelland Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "3 fish",
@@ -7791,7 +7842,7 @@ export const regulations: Waterbody[] = [
     waterbody: "Mcgregor Reservoir",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "0 fish",
+      walleye: "1 fish 50-55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       mountain_whitefish: "",
@@ -7808,7 +7859,7 @@ export const regulations: Waterbody[] = [
     waterbody: "Mcgregor Reservoir",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "0 fish",
+      walleye: "1 fish 50-55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       mountain_whitefish: "",
@@ -7975,9 +8026,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "mercredi-lake-c4c40",
+    id: "mercredi-lake-a2fec",
     season: "Open All Year",
     waterbody: "Mercredi Lake",
     waterbody_detail: "",
@@ -8027,28 +8078,9 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Lakes",
-    id: "michele-upper-and-e9f91",
-    season: "Closed All Year",
-    waterbody: "Michele (Upper And Lower) \nLakes ",
-    waterbody_detail: "Tributaries",
-    fish_limits: {
-      walleye: "",
-      northern_pike: "",
-      yellow_perch: "",
-      lake_trout: "",
-      mountain_whitefish: "",
-      cutthroat_trout: "",
-      burbot: "",
-      rainbow_trout: "",
-      trout_total: "",
-    },
-  },
-  {
-    bait_ban: "Bait ban",
-    fish_management_zone: "ES2-Lakes",
     id: "michele-upper-and-466b3",
     season: "Open Aug 1 to Oct 31",
-    waterbody: "Michele (Upper And Lower) Lakes ",
+    waterbody: "Michele (Upper And Lower) Lakes",
     waterbody_detail: "2,11-36-20-W5",
     fish_limits: {
       walleye: "",
@@ -8060,6 +8092,25 @@ export const regulations: Waterbody[] = [
       burbot: "",
       rainbow_trout: "",
       trout_total: "1 trout over 35 cm",
+    },
+  },
+  {
+    bait_ban: "Bait ban",
+    fish_management_zone: "ES2-Lakes",
+    id: "michele-upper-and-e9f91",
+    season: "Closed All Year",
+    waterbody: "Michele (Upper And Lower) Lakes",
+    waterbody_detail: "Tributaries",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "",
+      yellow_perch: "",
+      lake_trout: "",
+      mountain_whitefish: "",
+      cutthroat_trout: "",
+      burbot: "",
+      rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -8457,7 +8508,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail: "Includes tributaries and outlet for 1 km",
     fish_limits: {
       walleye: "0 fish",
-      northern_pike: "0 fish",
+      northern_pike: "1 fish",
       yellow_perch: "0 fish",
       lake_trout: "",
       lake_whitefish: "0 fish",
@@ -8550,14 +8601,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "myers-lake-c4c40",
+    id: "myers-lake-a2fec",
     season: "Open All Year",
     waterbody: "Myers Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -8667,6 +8718,7 @@ export const regulations: Waterbody[] = [
       burbot: "0 fish",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -8718,6 +8770,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -8735,34 +8788,36 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "north-saskatchewan--2d7c0",
+    id: "north-saskatchewan-river-54925",
     season: "Open Apr 1 to Aug 31",
-    waterbody: "North Saskatchewan  River",
+    waterbody: "North Saskatchewan River",
     waterbody_detail:
-      "Mainstem and tributaries from Banff National  Park boundary downstream to Abraham Lake  (2-18-36-17-W5) and tributaries includingtributaries to Abraham Lake, except Cline River  and Siffleur River",
+      "Mainstem and tributaries from Banff National Park boundary downstream to Abraham Lake (2-18-36-17-W5) and tributaries including tributaries to Abraham Lake, except Cline River and Siffleur River",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "Over30 cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "Over 30 cm",
       burbot: "",
       goldeye: "",
-      rainbow_trout: "Over30 cm",
+      rainbow_trout: "Over 30 cm",
+      trout_total: "2 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "north-saskatchewan--09e29",
+    id: "north-saskatchewan-river-9fbb3",
     season: "Open Sept 1 to Oct 31",
-    waterbody: "North Saskatchewan  River",
+    waterbody: "North Saskatchewan River",
     waterbody_detail:
-      "Mainstem and tributaries from Banff National  Park boundary downstream to Abraham Lake  (2-18-36-17-W5) and tributaries includingtributaries to Abraham Lake, except Cline River  and Siffleur River",
+      "Mainstem and tributaries from Banff National Park boundary downstream to Abraham Lake (2-18-36-17-W5) and tributaries including tributaries to Abraham Lake, except Cline River and Siffleur River",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -8771,59 +8826,63 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "north-saskatchewan--cc154",
+    id: "north-saskatchewan-river-0da43",
     season: "Apr 1 to Oct 31",
-    waterbody: "North Saskatchewan  River",
-    waterbody_detail: "Mainstem from Bighorn Dam downstream to  Hwy 22/39",
+    waterbody: "North Saskatchewan River",
+    waterbody_detail: "Mainstem from Bighorn Dam downstream to Hwy 22/39",
     fish_limits: {
-      walleye: "3 over50 cm",
+      walleye: "3 over 50 cm",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "Over35 cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "Over 35 cm",
       burbot: "10 fish",
       goldeye: "10 fish",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "north-saskatchewan--0bbb0",
+    id: "north-saskatchewan-river-f2f94",
     season: "Open Apr 1 to Aug 31",
-    waterbody: "North Saskatchewan  River",
+    waterbody: "North Saskatchewan River",
     waterbody_detail:
-      "Tributaries from Bighorn Dam downstream  to Hwy 22/39 (except Baptiste River, Bighorn  River, Brazeau River, Clearwater River,Ram  River, Wolf Creek and Washout Creek)",
+      "Tributaries from Bighorn Dam downstream to Hwy 22/39 (except Baptiste River, Bighorn River, Brazeau River, Clearwater River, Ram River, Wolf Creek and Washout Creek)",
     fish_limits: {
-      walleye: "3 over50 cm",
+      walleye: "3 over 50 cm",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "Over35 cm",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "Over 35 cm",
       burbot: "10 fish",
       goldeye: "10 fish",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "north-saskatchewan--be3ec",
+    id: "north-saskatchewan-river-72375",
     season: "Open Sept 1 to Oct 31",
-    waterbody: "North Saskatchewan  River",
+    waterbody: "North Saskatchewan River",
     waterbody_detail:
-      "Tributaries from Bighorn Dam downstream  to Hwy 22/39 (except Baptiste River, Bighorn  River, Brazeau River, Clearwater River,Ram  River, Wolf Creek and Washout Creek)",
+      "Tributaries from Bighorn Dam downstream to Hwy 22/39 (except Baptiste River, Bighorn River, Brazeau River, Clearwater River, Ram River, Wolf Creek and Washout Creek)",
     fish_limits: {
-      walleye: "3 over50 cm",
+      walleye: "3 over 50 cm",
       northern_pike: "3 fish",
       mountain_whitefish: "0 fish",
       cutthroat_trout: "",
       burbot: "10 fish",
       goldeye: "10 fish",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -8999,7 +9058,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "Oldman River",
     waterbody_detail:
-      "Tributaries of Oldman River from headwater \ndownstream to Sec. Rd. 510 excluding \nLivingstone River and Hidden Creek",
+      "Tributaries of Oldman River from headwater downstream to Sec. Rd. 510 excluding Livingstone River and Hidden Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -9035,7 +9094,7 @@ export const regulations: Waterbody[] = [
     id: "oldman-river-b0c29",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Oldman River",
-    waterbody_detail: "Mainstem - headwater downstream to Racehorse \nCreek",
+    waterbody_detail: "Mainstem - headwater downstream to Racehorse Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -9162,7 +9221,7 @@ export const regulations: Waterbody[] = [
     id: "oldman-river-cf7b2",
     season: "Open June 16 to Oct 31",
     waterbody: "Oldman River",
-    waterbody_detail: "Oldman Reservoir dam downstream to Sec. Rd. \n509",
+    waterbody_detail: "Oldman Reservoir dam downstream to Sec. Rd. 509",
     fish_limits: {
       walleye: "",
       northern_pike: "3 fish",
@@ -9180,7 +9239,7 @@ export const regulations: Waterbody[] = [
     id: "oldman-river-d4975",
     season: "Open Nov 1 to Mar 31",
     waterbody: "Oldman River",
-    waterbody_detail: "Oldman Reservoir dam downstream to Sec. Rd. \n509",
+    waterbody_detail: "Oldman Reservoir dam downstream to Sec. Rd. 509",
     fish_limits: {
       walleye: "",
       northern_pike: "3 fish",
@@ -9214,9 +9273,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "one-week-lake-c4c40",
+    id: "one-week-lake-a2fec",
     season: "Open All Year",
     waterbody: "One Week Lake",
     waterbody_detail: "",
@@ -9319,9 +9378,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "pans-lake-c4c40",
+    id: "pans-lake-a2fec",
     season: "Open All Year",
     waterbody: "Pans Lake",
     waterbody_detail: "",
@@ -9542,9 +9601,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "peters-lake-c4c40",
+    id: "peters-lake-a2fec",
     season: "Open All Year",
     waterbody: "Peters Lake",
     waterbody_detail: "",
@@ -9812,11 +9871,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "pinto-creek-e46ee",
+    id: "pinto-creek-721e3",
     season: "Closed All Year",
     waterbody: "Pinto Creek",
     waterbody_detail:
-      "35-29-10-W5; Tributary to North Burnt Timber  Creek; Mainstem and tributaries",
+      "35-29-10-W5; Tributary to North Burnt Timber Creek; Mainstem and tributaries ",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -9825,78 +9884,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
-    },
-  },
-  {
-    bait_ban: "Bait ban",
-    fish_management_zone: "ES2-Rivers",
-    id: "pinto-creek-23821",
-    season: "Open Apr 1 to Aug 31",
-    waterbody: "Pinto Creek",
-    waterbody_detail:
-      "Mainstem upstream of the North Fork Road  and all tributaries (except Swan Creek and  tributaries between Vetch and SwanCreek)",
-    fish_limits: {
-      walleye: "",
-      northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
-      cutthroat_trout: "",
-      burbot: "",
-      goldeye: "",
-      rainbow_trout: "",
-    },
-  },
-  {
-    bait_ban: "Bait ban",
-    fish_management_zone: "ES2-Rivers",
-    id: "pinto-creek-e5474",
-    season: "Open Sept 1 to Oct 31",
-    waterbody: "Pinto Creek",
-    waterbody_detail:
-      "Mainstem upstream of the North Fork Road  and all tributaries (except Swan Creek and  tributaries between Vetch and SwanCreek)",
-    fish_limits: {
-      walleye: "",
-      northern_pike: "3 fish",
-      mountain_whitefish: "0 fish",
-      cutthroat_trout: "",
-      burbot: "",
-      goldeye: "",
-      rainbow_trout: "",
-    },
-  },
-  {
-    bait_ban: "Bait ban",
-    fish_management_zone: "ES2-Rivers",
-    id: "pinto-creek-cbe6b",
-    season: "Open Apr 1 to Aug 31",
-    waterbody: "Pinto Creek",
-    waterbody_detail:
-      "The portion of the mainstem and tributaries  between Vetch and Swan Creeks",
-    fish_limits: {
-      walleye: "",
-      northern_pike: "3 fish",
-      mountain_whitefish: "0 fish",
-      cutthroat_trout: "",
-      burbot: "",
-      goldeye: "",
-      rainbow_trout: "",
-    },
-  },
-  {
-    bait_ban: "Bait ban",
-    fish_management_zone: "ES2-Rivers",
-    id: "pinto-creek-c7c25",
-    season: "Open Apr 1 to Oct 31",
-    waterbody: "Pinto Creek",
-    waterbody_detail:
-      "The remainder of the mainstem downstream  of the North Fork Road (except the portion  between Vetch and Swan Creeks)",
-    fish_limits: {
-      walleye: "3 over50 cm",
-      northern_pike: "3 fish",
-      mountain_whitefish: "0 fish",
-      cutthroat_trout: "",
-      burbot: "",
-      goldeye: "",
-      rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -9924,7 +9912,7 @@ export const regulations: Waterbody[] = [
     fish_management_zone: "ES3-Lakes",
     id: "pit-24-lake-afe60",
     season: "Open All Year",
-    waterbody: "Pit 24 Lake ",
+    waterbody: "Pit 24 Lake",
     waterbody_detail: "15,16, NE4-47-19-W5",
     fish_limits: {
       walleye: "",
@@ -9960,7 +9948,7 @@ export const regulations: Waterbody[] = [
     fish_management_zone: "ES3-Lakes",
     id: "pit-44-lake-2a298",
     season: "Open All Year",
-    waterbody: "Pit 44 Lake ",
+    waterbody: "Pit 44 Lake",
     waterbody_detail: "SW 35-46-19-W5",
     fish_limits: {
       walleye: "",
@@ -10044,9 +10032,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "potts-lake-c4c40",
+    id: "potts-lake-a2fec",
     season: "Open All Year",
     waterbody: "Potts Lake",
     waterbody_detail: "",
@@ -10059,6 +10047,82 @@ export const regulations: Waterbody[] = [
       burbot: "",
       cisco: "",
       goldeye: "",
+    },
+  },
+  {
+    bait_ban: "Bait ban",
+    fish_management_zone: "ES2-Rivers",
+    id: "prairie-creek-6ef43",
+    season: "Open Apr 1 to Aug 31",
+    waterbody: "Prairie Creek",
+    waterbody_detail:
+      "Mainstem upstream of the North Fork Road and all tributaries (except Swan Creek and tributaries between Vetch and Swan Creek)",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "3 fish",
+      mountain_whitefish: "5 over 30 cm",
+      cutthroat_trout: "",
+      burbot: "",
+      goldeye: "",
+      rainbow_trout: "",
+      trout_total: "2 trout",
+    },
+  },
+  {
+    bait_ban: "Bait ban",
+    fish_management_zone: "ES2-Rivers",
+    id: "prairie-creek-80270",
+    season: "Open Sept 1 to Oct 31",
+    waterbody: "Prairie Creek",
+    waterbody_detail:
+      "Mainstem upstream of the North Fork Road and all tributaries (except Swan Creek and tributaries between Vetch and Swan Creek)",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "3 fish",
+      mountain_whitefish: "0 fish",
+      cutthroat_trout: "",
+      burbot: "",
+      goldeye: "",
+      rainbow_trout: "",
+      trout_total: "0 trout",
+    },
+  },
+  {
+    bait_ban: "Bait ban",
+    fish_management_zone: "ES2-Rivers",
+    id: "prairie-creek-e2fe4",
+    season: "Open Apr 1 to Aug 31",
+    waterbody: "Prairie Creek",
+    waterbody_detail:
+      "The portion of the mainstem and tributaries between Vetch and Swan Creeks",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "3 fish",
+      mountain_whitefish: "0 fish",
+      cutthroat_trout: "",
+      burbot: "",
+      goldeye: "",
+      rainbow_trout: "",
+      trout_total: "0 trout",
+    },
+  },
+  {
+    bait_ban: "Bait ban",
+    fish_management_zone: "ES2-Rivers",
+    id: "prairie-creek-237d4",
+    season: "Open Apr 1 to Oct 31",
+    waterbody: "Prairie Creek",
+    waterbody_detail:
+      "The remainder of the mainstem downstream of the North Fork Road (except the portion between Vetch and Swan Creeks)",
+    fish_limits: {
+      walleye: "3 over 50 cm",
+      northern_pike: "3 fish",
+      mountain_whitefish: "0 fish",
+      cutthroat_trout: "",
+      burbot: "",
+      goldeye: "",
+      rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -10191,11 +10255,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "ram-river-d0a98",
+    id: "ram-river-ce241",
     season: "Open June 16 to Oct 31",
     waterbody: "Ram River",
     waterbody_detail:
-      "Also known as South Ram River; Mainstem and  tributaries (except Fall Creek)",
+      "Also known as South Ram River; Mainstem and tributaries (except Fall Creek)",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -10204,6 +10268,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -10276,9 +10341,9 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "raven-brood-troutstation-2a157",
+    id: "raven-brood-trout-2a157",
     season: "Closed All Year",
-    waterbody: "Raven Brood TroutStation",
+    waterbody: "Raven Brood Trout Station",
     waterbody_detail: "SW-5-36-5-W5; All water within",
     fish_limits: {
       walleye: "",
@@ -10288,24 +10353,26 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "raven-river-bafa7",
+    id: "raven-river-54359",
     season: "Open Apr 1 to Oct 31",
     waterbody: "Raven River",
     waterbody_detail:
-      "Mainstem and tributaries except North Raven  River (Stauffer Creek)",
+      "Mainstem and tributaries except North Raven River (Stauffer Creek)",
     fish_limits: {
       walleye: "0 fish",
       northern_pike: "3 fish",
-      mountain_whitefish: "3 over30 cm",
+      mountain_whitefish: "3 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -10365,11 +10432,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "red-deer-river-4063d",
+    id: "red-deer-river-81574",
     season: "Open Apr 1 to Oct 31",
     waterbody: "Red Deer River",
     waterbody_detail:
-      "Mainstem and tributaries from Banff National  Park boundary downstream to the Forestry  Trunk Road (13-31-10-W5)",
+      "Mainstem and tributaries from Banff National Park boundary downstream to the Forestry Trunk Road (13-31-10-W5)",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -10378,24 +10445,26 @@ export const regulations: Waterbody[] = [
       burbot: "0 fish",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "red-deer-river-acfb5",
+    id: "red-deer-river-5d527",
     season: "Open Apr 1 to Oct 31",
     waterbody: "Red Deer River",
     waterbody_detail:
-      "Mainstem from Forestry Trunk Road downstream to Gleniffer (Reservoir) Lake and tributaries (except Fallentimber Creek, Raven  River, NorthRaven River and Pinto Creek)",
+      "Mainstem from Forestry Trunk Road downstream to Gleniffer (Reservoir) Lake and tributaries (except Fallentimber Creek, Raven River, North Raven River and Pinto Creek)",
     fish_limits: {
       walleye: "0 fish",
       northern_pike: "3 fish",
-      mountain_whitefish: "3 over30 cm",
+      mountain_whitefish: "3 over 30 cm",
       cutthroat_trout: "",
       burbot: "10 fish",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -10548,15 +10617,15 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "richardson-backcountry-3d681",
+    id: "richardson-backcountry-71df9",
     season: "Open May 15 to Mar 31",
     waterbody: "Richardson Backcountry",
     waterbody_detail:
       "All water within area between Twp. 103 and 107, and Rge 01-W4 and Rge 08-W4; Locally known as Richardson Backcountry",
     fish_limits: {
-      walleye: "",
+      walleye: "1 over 50 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -10585,14 +10654,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "richardson-lake-4bd79",
+    id: "richardson-lake-ff5cd",
     season: "Open May 15 to Mar 31",
     waterbody: "Richardson Lake",
     waterbody_detail: "Includes outlet (Jackfish Channel)",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -10689,9 +10758,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "roderick-lake-c4c40",
+    id: "roderick-lake-a2fec",
     season: "Open All Year",
     waterbody: "Roderick Lake",
     waterbody_detail: "",
@@ -10775,9 +10844,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "royemma-lake-0b13f",
+    id: "royemma-lake-22151",
     season: "Open May 15 to Mar 31",
     waterbody: "Royemma Lake",
     waterbody_detail: "75-1-W4",
@@ -10846,6 +10915,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -10869,14 +10939,14 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "ryan-lake-c4c40",
+    id: "ryan-lake-a2fec",
     season: "Open All Year",
     waterbody: "Ryan Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "3 over 43 cm",
       northern_pike: "3 over 63 cm",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -10884,23 +10954,6 @@ export const regulations: Waterbody[] = [
       burbot: "",
       cisco: "",
       goldeye: "",
-    },
-  },
-  {
-    bait_ban: "Bait allowed",
-    fish_management_zone: "NB1-Lakes",
-    id: "saddle-lake-89293",
-    season: "Open All Year",
-    waterbody: "Saddle Lake",
-    waterbody_detail: "",
-    fish_limits: {
-      walleye: "3 over 50 cm",
-      northern_pike: "3 over 63 cm",
-      yellow_perch: "15 fish",
-      lake_trout: "",
-      lake_whitefish: "10 fish",
-      burbot: "10 fish",
-      trout_total: "",
     },
   },
   {
@@ -11139,7 +11192,7 @@ export const regulations: Waterbody[] = [
     id: "sheep-river-9f1ee",
     season: "Open Sept 1 to Oct 31",
     waterbody: "Sheep River",
-    waterbody_detail: "Mainstem - Gorge Creek downstream to \nHighwood River",
+    waterbody_detail: "Mainstem - Gorge Creek downstream to Highwood River",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -11207,11 +11260,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "siffleur-river-a8ca6",
+    id: "siffleur-river-2898d",
     season: "Closed All Year",
     waterbody: "Siffleur River",
     waterbody_detail:
-      "Mainstem and tributaries downstream from  Banff National Park boundary",
+      "Mainstem and tributaries downstream from Banff National Park boundary ",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -11220,6 +11273,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -11244,9 +11298,9 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "siffleur-wildernessarea-02bc3",
+    id: "siffleur-wilderness-area-02bc3",
     season: "Closed All Year",
-    waterbody: "Siffleur WildernessArea",
+    waterbody: "Siffleur Wilderness Area",
     waterbody_detail: "All water within the Wilderness Area",
     fish_limits: {
       walleye: "",
@@ -11256,6 +11310,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -11433,7 +11488,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "Smoky River",
     waterbody_detail:
-      "Headwater downstream to Hwy. 43 and tributaries except Kakwa, \nMuskeg, Simonette rivers",
+      "Headwater downstream to Hwy. 43 and tributaries except Kakwa, Muskeg, Simonette rivers",
     fish_limits: {
       walleye: "3 over 50 cm",
       northern_pike: "3 over 63 cm",
@@ -11520,7 +11575,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail: "",
     fish_limits: {
       walleye: "1 over 50 cm",
-      northern_pike: "0 fish",
+      northern_pike: "1 fish 63-70 cm",
       yellow_perch: "5 fish",
       lake_whitefish: "10 fish",
       burbot: "10 fish",
@@ -11537,7 +11592,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail: "Tributaries and outlet 1 km downstream ",
     fish_limits: {
       walleye: "1 over 50 cm",
-      northern_pike: "0 fish",
+      northern_pike: "1 fish 63-70 cm",
       yellow_perch: "5 fish",
       lake_whitefish: "10 fish",
       burbot: "10 fish",
@@ -11829,7 +11884,7 @@ export const regulations: Waterbody[] = [
       "Open May 15 to Mar 31 Long Weekends With The Holiday Friday 1700 H Thursday to 1 2 H After Sunset The Following Sunday",
     waterbody: "Spencer Lake",
     waterbody_detail:
-      "NOTE: Spencer Lake is located in the Cold Lake Air \nWeapons Range and live ammunition is used in the \narea. Use of the lake by anglers is dependent on \nthe approval of the Canadian Forces at the Base. If \nnecessary for Base operations, access to Spencer \nLake may be closed during some of the open periods \nlisted above. Due to safety concerns, the Canadian \nForces does not permit overland access to Spencer \nLake on any trails that are inside the Bombing Range \nboundary, including the trail between Seibert and \nSpencer lakes. Spencer Lake may only be accessed \nfrom the west tip of Spencer Lake and it is unlawful to \ngo ashore inside the bombing range boundary.",
+      "NOTE: Spencer Lake is located in the Cold Lake Air Weapons Range and live ammunition is used in the area. Use of the lake by anglers is dependent on the approval of the Canadian Forces at the Base. If necessary for Base operations, access to Spencer Lake may be closed during some of the open periods listed above. Due to safety concerns, the Canadian Forces does not permit overland access to Spencer Lake on any trails that are inside the Bombing Range boundary, including the trail between Seibert and Spencer lakes. Spencer Lake may only be accessed from the west tip of Spencer Lake and it is unlawful to go ashore inside the bombing range boundary.",
     fish_limits: {
       walleye: "2 fish 45-50 cm",
       northern_pike: "1 over 75 cm",
@@ -11848,7 +11903,7 @@ export const regulations: Waterbody[] = [
       "Open May 15 to Mar 31 Long Weekends With The Holiday Monday 1700 H Friday to 1 2 H After Sunset The Following Monday",
     waterbody: "Spencer Lake",
     waterbody_detail:
-      "NOTE: Spencer Lake is located in the Cold Lake Air \nWeapons Range and live ammunition is used in the \narea. Use of the lake by anglers is dependent on \nthe approval of the Canadian Forces at the Base. If \nnecessary for Base operations, access to Spencer \nLake may be closed during some of the open periods \nlisted above. Due to safety concerns, the Canadian \nForces does not permit overland access to Spencer \nLake on any trails that are inside the Bombing Range \nboundary, including the trail between Seibert and \nSpencer lakes. Spencer Lake may only be accessed \nfrom the west tip of Spencer Lake and it is unlawful to \ngo ashore inside the bombing range boundary.",
+      "NOTE: Spencer Lake is located in the Cold Lake Air Weapons Range and live ammunition is used in the area. Use of the lake by anglers is dependent on the approval of the Canadian Forces at the Base. If necessary for Base operations, access to Spencer Lake may be closed during some of the open periods listed above. Due to safety concerns, the Canadian Forces does not permit overland access to Spencer Lake on any trails that are inside the Bombing Range boundary, including the trail between Seibert and Spencer lakes. Spencer Lake may only be accessed from the west tip of Spencer Lake and it is unlawful to go ashore inside the bombing range boundary.",
     fish_limits: {
       walleye: "2 fish 45-50 cm",
       northern_pike: "1 over 75 cm",
@@ -11866,7 +11921,7 @@ export const regulations: Waterbody[] = [
     season: "Open Dec 24 1700 H to 1 2 H After Sunset On Jan 1",
     waterbody: "Spencer Lake",
     waterbody_detail:
-      "NOTE: Spencer Lake is located in the Cold Lake Air \nWeapons Range and live ammunition is used in the \narea. Use of the lake by anglers is dependent on \nthe approval of the Canadian Forces at the Base. If \nnecessary for Base operations, access to Spencer \nLake may be closed during some of the open periods \nlisted above. Due to safety concerns, the Canadian \nForces does not permit overland access to Spencer \nLake on any trails that are inside the Bombing Range \nboundary, including the trail between Seibert and \nSpencer lakes. Spencer Lake may only be accessed \nfrom the west tip of Spencer Lake and it is unlawful to \ngo ashore inside the bombing range boundary.",
+      "NOTE: Spencer Lake is located in the Cold Lake Air Weapons Range and live ammunition is used in the area. Use of the lake by anglers is dependent on the approval of the Canadian Forces at the Base. If necessary for Base operations, access to Spencer Lake may be closed during some of the open periods listed above. Due to safety concerns, the Canadian Forces does not permit overland access to Spencer Lake on any trails that are inside the Bombing Range boundary, including the trail between Seibert and Spencer lakes. Spencer Lake may only be accessed from the west tip of Spencer Lake and it is unlawful to go ashore inside the bombing range boundary.",
     fish_limits: {
       walleye: "2 fish 45-50 cm",
       northern_pike: "1 over 75 cm",
@@ -11971,9 +12026,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "st.-agnes-lake-c4c40",
+    id: "st.-agnes-lake-a2fec",
     season: "Open All Year",
     waterbody: "St. Agnes Lake",
     waterbody_detail: "",
@@ -12033,7 +12088,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "St. Mary River",
     waterbody_detail:
-      "Mainstem upstream of St Mary Reservoir; \nIncludes tributaries except Lee Creek",
+      "Mainstem upstream of St Mary Reservoir; Includes tributaries except Lee Creek",
     fish_limits: {
       northern_pike: "3 fish",
       yellow_perch: "",
@@ -12102,9 +12157,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "steepbank-lake-59f4e",
+    id: "steepbank-lake-f0be4",
     season: "Open May 15 to Mar 31",
     waterbody: "Steepbank Lake",
     waterbody_detail: "",
@@ -12176,10 +12231,11 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES1-Rivers",
-    id: "storm-creek-56fa5",
+    id: "storm-creek-94e2d",
     season: "Closed All Year",
     waterbody: "Storm Creek",
-    waterbody_detail: "Upstream of Mist Creek confluence; Includes tributaries",
+    waterbody_detail:
+      "Upstream of Mist Creek confluence; Includes tributaries (18-7-W5)",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -12370,45 +12426,47 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "swan-creek-04a5f",
+    id: "swan-creek-caab3",
     season: "Open Apr 1 to Aug 31",
     waterbody: "Swan Creek",
     waterbody_detail:
-      "Mainstem and tributaries; Downstream for 2 km  below Swan Lake",
+      "Mainstem and tributaries; Downstream for 2 km below Swan Lake",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "swan-creek-30171",
+    id: "swan-creek-87899",
     season: "Apr 1 to Aug 31",
     waterbody: "Swan Creek",
-    waterbody_detail: "The remainder including tributaries to Swan  Lake",
+    waterbody_detail: "The remainder including tributaries to Swan Lake",
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "swan-creek-df0ca",
+    id: "swan-creek-33ef1",
     season: "Sept 1 to Oct 31",
     waterbody: "Swan Creek",
-    waterbody_detail: "The remainder including tributaries to Swan  Lake",
+    waterbody_detail: "The remainder including tributaries to Swan Lake",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -12417,6 +12475,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "0 trout",
     },
   },
   {
@@ -12554,11 +12613,12 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -12605,8 +12665,8 @@ export const regulations: Waterbody[] = [
     waterbody: "Thurston Lake",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "0 fish",
-      northern_pike: "1 fish 63-70 cm",
+      walleye: "1 fish 50-55 cm",
+      northern_pike: "1 fish 65-80 cm",
       yellow_perch: "",
       lake_trout: "",
       lake_whitefish: "10 fish",
@@ -12622,8 +12682,8 @@ export const regulations: Waterbody[] = [
     waterbody: "Thurston Lake",
     waterbody_detail: "Tributaries and outlet for 1 km",
     fish_limits: {
-      walleye: "0 fish",
-      northern_pike: "1 fish 63-70 cm",
+      walleye: "1 fish 50-55 cm",
+      northern_pike: "1 fish 65-80 cm",
       yellow_perch: "",
       lake_trout: "",
       lake_whitefish: "10 fish",
@@ -12726,7 +12786,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail:
       "Portion west of SW 2-15-22-W4 (North of a line from the farm building to Little Bow Provincial Park pumphouse on the east); no fishing within 100 m of the Canal inlet structure",
     fish_limits: {
-      walleye: "0 fish",
+      walleye: "1 fish 50-55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       mountain_whitefish: "",
@@ -12744,7 +12804,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail:
       "The remainder of the Reservoir including the canal between Travers and McGregor reservoirs; no fishing within 100m of the canal inlet structure",
     fish_limits: {
-      walleye: "0 fish",
+      walleye: "1 fish 50-55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       mountain_whitefish: "",
@@ -12754,9 +12814,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "treasure-loch-lake-c4c40",
+    id: "treasure-loch-lake-a2fec",
     season: "Open All Year",
     waterbody: "Treasure Loch Lake",
     waterbody_detail: "",
@@ -12789,9 +12849,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "tulip-lake-c4c40",
+    id: "tulip-lake-a2fec",
     season: "Open All Year",
     waterbody: "Tulip Lake",
     waterbody_detail: "",
@@ -12807,9 +12867,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "turtle-lake-c4c40",
+    id: "turtle-lake-a2fec",
     season: "Open All Year",
     waterbody: "Turtle Lake",
     waterbody_detail: "",
@@ -12866,7 +12926,7 @@ export const regulations: Waterbody[] = [
     waterbody: "Twin Valley Reservoir",
     waterbody_detail: "",
     fish_limits: {
-      walleye: "",
+      walleye: "0 fish",
       northern_pike: "1 over 63 cm",
       yellow_perch: "",
       mountain_whitefish: "",
@@ -12967,9 +13027,9 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "unnamed-devilsfork-creek-473be",
+    id: "unnamed-devils-fork-473be",
     season: "Closed All Year",
-    waterbody: "Unnamed (Devil'sFork) Creek",
+    waterbody: "Unnamed (Devil's Fork) Creek",
     waterbody_detail: "4-45-16-W5; Tributary to Brazeau River",
     fish_limits: {
       walleye: "",
@@ -12979,6 +13039,7 @@ export const regulations: Waterbody[] = [
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "",
     },
   },
   {
@@ -13416,9 +13477,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "wappau-lake-590f5",
+    id: "wappau-lake-d36a2",
     season: "Open May 15 to Mar 31",
     waterbody: "Wappau Lake",
     waterbody_detail: "14-75-11-W4",
@@ -13443,11 +13504,12 @@ export const regulations: Waterbody[] = [
     fish_limits: {
       walleye: "",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -13476,7 +13538,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "Waterton River",
     waterbody_detail:
-      "Tributaries upstream of Waterton Reservoir \nincluding Drywood Creek",
+      "Tributaries upstream of Waterton Reservoir including Drywood Creek",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -13550,7 +13612,7 @@ export const regulations: Waterbody[] = [
     season: "Open Sept 1 to Oct 31",
     waterbody: "Waterton River",
     waterbody_detail:
-      "Mainstem and tributaries - downstream of \nWaterton Reservoir",
+      "Mainstem and tributaries - downstream of Waterton Reservoir",
     fish_limits: {
       walleye: "",
       northern_pike: "",
@@ -13620,9 +13682,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "weekes-lake-c4c40",
+    id: "weekes-lake-a2fec",
     season: "Open All Year",
     waterbody: "Weekes Lake",
     waterbody_detail: "",
@@ -13690,23 +13752,6 @@ export const regulations: Waterbody[] = [
   },
   {
     bait_ban: "Bait ban",
-    fish_management_zone: "ES2-Rivers",
-    id: "white-goat-wilderness-02bc3",
-    season: "Closed All Year",
-    waterbody: "White Goat Wilderness  Area",
-    waterbody_detail: "All water within the Wilderness Area",
-    fish_limits: {
-      walleye: "",
-      northern_pike: "",
-      mountain_whitefish: "",
-      cutthroat_trout: "",
-      burbot: "",
-      goldeye: "",
-      rainbow_trout: "",
-    },
-  },
-  {
-    bait_ban: "Bait ban",
     fish_management_zone: "ES2-Lakes",
     id: "white-goat-wilderness-256c5",
     season: "Closed All Year",
@@ -13720,6 +13765,24 @@ export const regulations: Waterbody[] = [
       mountain_whitefish: "",
       cutthroat_trout: "",
       burbot: "",
+      rainbow_trout: "",
+      trout_total: "",
+    },
+  },
+  {
+    bait_ban: "Bait ban",
+    fish_management_zone: "ES2-Rivers",
+    id: "white-goat-wilderness-02bc3",
+    season: "Closed All Year",
+    waterbody: "White Goat Wilderness Area",
+    waterbody_detail: "All water within the Wilderness Area",
+    fish_limits: {
+      walleye: "",
+      northern_pike: "",
+      mountain_whitefish: "",
+      cutthroat_trout: "",
+      burbot: "",
+      goldeye: "",
       rainbow_trout: "",
       trout_total: "",
     },
@@ -13871,7 +13934,7 @@ export const regulations: Waterbody[] = [
     season: "Open Nov 1 to Mar 15",
     waterbody: "Willow Creek",
     waterbody_detail:
-      "Mainstem only downstream of Pine Coulee \nReservoir Diversion Headpond",
+      "Mainstem only downstream of Pine Coulee Reservoir Diversion Headpond",
     fish_limits: {
       walleye: "0 fish",
       northern_pike: "0 fish",
@@ -13910,7 +13973,7 @@ export const regulations: Waterbody[] = [
     waterbody: "Winagami Lake",
     waterbody_detail: "Includes Boone's Slough and South Heart Reservoir",
     fish_limits: {
-      walleye: "1 over 60 cm",
+      walleye: "1 over 55 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       lake_whitefish: "10 fish",
@@ -13927,7 +13990,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail:
       "Tributaries, inlet canal, outlet stream, and outlet canal",
     fish_limits: {
-      walleye: "1 over 60 cm",
+      walleye: "1 over 55 cm",
       northern_pike: "0 fish",
       yellow_perch: "",
       lake_whitefish: "10 fish",
@@ -13981,7 +14044,7 @@ export const regulations: Waterbody[] = [
     waterbody_detail:
       "For lake only.  For flowing water see Winefred Lake Tributaries and Outflows.",
     fish_limits: {
-      walleye: "",
+      walleye: "1 fish 45-50 cm",
       northern_pike: "0 fish",
       yellow_perch: "15 fish",
       lake_trout: "",
@@ -13996,7 +14059,7 @@ export const regulations: Waterbody[] = [
     fish_management_zone: "NB4-Rivers",
     id: "winefred-lake-tributaries-d07a9",
     season: "Open June 1 to Oct 31",
-    waterbody: "Winefred Lake Tributaries and Outflows ",
+    waterbody: "Winefred Lake Tributaries and Outflows",
     waterbody_detail:
       "Includes all named and unnamed tributaries and outflows within 10km of Winefred Lake including Winefred River, (Unnamed) Sand River and Grist River",
     fish_limits: {
@@ -14010,9 +14073,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "winnifred-lake-74a9a",
+    id: "winnifred-lake-0999b",
     season: "Open All Year",
     waterbody: "Winnifred Lake",
     waterbody_detail: "118-3-W4",
@@ -14046,18 +14109,19 @@ export const regulations: Waterbody[] = [
   {
     bait_ban: "Bait ban",
     fish_management_zone: "ES2-Rivers",
-    id: "wolf-creek-eac4c",
+    id: "wolf-creek-f27db",
     season: "Open All Year",
     waterbody: "Wolf Creek",
-    waterbody_detail: "13-47-8-W5; Rose Creek; Mainstem and  tributaries",
+    waterbody_detail: "13-47-8-W5; Rose Creek; Mainstem and tributaries",
     fish_limits: {
       walleye: "",
       northern_pike: "3 fish",
-      mountain_whitefish: "5 over30 cm",
+      mountain_whitefish: "5 over 30 cm",
       cutthroat_trout: "",
       burbot: "",
       goldeye: "",
       rainbow_trout: "",
+      trout_total: "2 trout",
     },
   },
   {
@@ -14132,9 +14196,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "woodman-lake-c4c40",
+    id: "woodman-lake-a2fec",
     season: "Open All Year",
     waterbody: "Woodman Lake",
     waterbody_detail: "",
@@ -14150,9 +14214,9 @@ export const regulations: Waterbody[] = [
     },
   },
   {
-    bait_ban: "Bait ban",
+    bait_ban: "Bait allowed",
     fish_management_zone: "NB4-Lakes",
-    id: "wylie-lake-c4c40",
+    id: "wylie-lake-a2fec",
     season: "Open All Year",
     waterbody: "Wylie Lake",
     waterbody_detail: "",
@@ -14301,7 +14365,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
@@ -14435,7 +14499,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail: "Angling Lake",
         fish_limits: {
           walleye: "",
-          northern_pike: "1 over 63 cm",
+          northern_pike: "1 fish",
           yellow_perch: "15 fish",
           lake_trout: "",
           lake_whitefish: "",
@@ -14694,7 +14758,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Badger Lake",
         waterbody_detail: "Badger Lake",
         fish_limits: {
-          walleye: "0 fish",
+          walleye: "1 fish 50-55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           mountain_whitefish: "",
@@ -14765,9 +14829,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Baptiste River",
         waterbody_detail: "Mainstem only",
         fish_limits: {
-          walleye: "3 over50 cm",
+          walleye: "3 over 50 cm",
           northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
@@ -15631,9 +15695,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Big-Johnson-(Chump)-Lake-": {
-    id: "Big-Johnson-(Chump)-Lake-",
-    name: "Big Johnson (Chump) Lake ",
+  "Big-Johnson-(Chump)-Lake": {
+    id: "Big-Johnson-(Chump)-Lake",
+    name: "Big Johnson (Chump) Lake",
     groupExceptionZone: null,
     waterbodies: [
       {
@@ -15641,8 +15705,8 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_management_zone: "NB1-Lakes",
         id: "big-johnson-chump-eaf70",
         season: "Open May 15 to Mar 31",
-        waterbody: "Big Johnson (Chump) Lake ",
-        waterbody_detail: "Big Johnson (Chump) Lake ",
+        waterbody: "Big Johnson (Chump) Lake",
+        waterbody_detail: "Big Johnson (Chump) Lake",
         fish_limits: {
           walleye: "0 fish",
           northern_pike: "1 fish",
@@ -15686,16 +15750,15 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "bighorn-river-e67a7",
+        id: "bighorn-river-849d6",
         season: "Open June 16 to Aug 31",
         waterbody: "Bighorn River",
-        waterbody_detail:
-          "Mainstem and tributaries upstream of Crescent  Falls",
+        waterbody_detail: "Mainstem and tributaries upstream of Crescent Falls",
         fish_limits: {
           walleye: "",
           northern_pike: "",
           mountain_whitefish: "",
-          cutthroat_trout: "over 30cm",
+          cutthroat_trout: "over 30 cm",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
@@ -15705,11 +15768,10 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "bighorn-river-289a3",
+        id: "bighorn-river-e8f4b",
         season: "Open Sept 1 to Oct 31",
         waterbody: "Bighorn River",
-        waterbody_detail:
-          "Mainstem and tributaries upstream of Crescent  Falls",
+        waterbody_detail: "Mainstem and tributaries upstream of Crescent Falls",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -15724,16 +15786,16 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "bighorn-river-1daa1",
+        id: "bighorn-river-52a61",
         season: "Open June 16 to Aug 31",
         waterbody: "Bighorn River",
         waterbody_detail:
-          "Mainstem and tributaries downstream of  Crescent Falls",
+          "Mainstem and tributaries downstream of Crescent Falls",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "over 35cm",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "over 35 cm",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
@@ -15743,11 +15805,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "bighorn-river-49d43",
+        id: "bighorn-river-fa135",
         season: "Open Sept 1 to Oct 31",
         waterbody: "Bighorn River",
         waterbody_detail:
-          "Mainstem and tributaries downstream of  Crescent Falls",
+          "Mainstem and tributaries downstream of Crescent Falls",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -15885,11 +15947,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "blackstone-river-e7057",
+        id: "blackstone-river-90c74",
         season: "Closed All Year",
         waterbody: "Blackstone River",
         waterbody_detail:
-          "Mainstem and tributaries upstream of Mons  Creek including Mons Creek",
+          "Mainstem and tributaries upstream of Mons Creek including Mons Creek",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -15898,16 +15960,17 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "blackstone-river-afdef",
+        id: "blackstone-river-4189f",
         season: "Open June 16 to Oct 31",
         waterbody: "Blackstone River",
         waterbody_detail:
-          "Mainstem downstream of Mons Creek and  tributaries (except Rundell Creek)",
+          "Mainstem downstream of Mons Creek and tributaries (except Rundell Creek)",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -16314,16 +16377,16 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "brazeau-river-c8f2e",
+        id: "brazeau-river-d3f19",
         season: "Open June 16 to Aug 31",
         waterbody: "Brazeau River",
         waterbody_detail:
-          "Mainstem upstream of Forestry Trunk Road  (bridge at 6-16-45-18-W5) and tributaries  (except Cardinal River), outside ofJasper  National Park",
+          "Mainstem upstream of Forestry Trunk Road (bridge at 6-16-45-18-W5) and tributaries (except Cardinal River), outside of Jasper National Park",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "over 30cm",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "over 30 cm",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
@@ -16333,11 +16396,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "brazeau-river-c7a1c",
+        id: "brazeau-river-b1d6c",
         season: "Open Sept 1 to Oct 31",
         waterbody: "Brazeau River",
         waterbody_detail:
-          "Mainstem upstream of Forestry Trunk Road  (bridge at 6-16-45-18-W5) and tributaries  (except Cardinal River), outside ofJasper  National Park",
+          "Mainstem upstream of Forestry Trunk Road (bridge at 6-16-45-18-W5) and tributaries (except Cardinal River), outside of Jasper National Park",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -16352,16 +16415,16 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "brazeau-river-ef4c6",
+        id: "brazeau-river-2b773",
         season: "Open Apr 1 to Oct 31",
         waterbody: "Brazeau River",
         waterbody_detail:
-          "Mainstem downstream of the Forestry Trunk  Road (bridge at 6-16-45-18-W5) to the Brazeau  Reservoir",
+          "Mainstem downstream of the Forestry Trunk Road (bridge at 6-16-45-18-W5) to the Brazeau Reservoir",
         fish_limits: {
-          walleye: "3 over50 cm",
-          northern_pike: "3 over63 cm",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "over 35  cm",
+          walleye: "3 over 50 cm",
+          northern_pike: "3 over 63 cm",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "over 35 cm",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
@@ -16616,7 +16679,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "0 fish",
           northern_pike: "3 fish",
-          mountain_whitefish: "3 over30 cm",
+          mountain_whitefish: "3 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
@@ -17507,7 +17570,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
@@ -17567,15 +17630,15 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "clearwater-river-463ec",
+        id: "clearwater-river-5dee6",
         season: "Open Apr 1 to Aug 31",
         waterbody: "Clearwater River",
         waterbody_detail:
-          "Mainstem from the Banff National Park  boundary downstream to Timber Creek",
+          "Mainstem from the Banff National Park boundary downstream to Timber Creek",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
@@ -17586,11 +17649,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "clearwater-river-623ca",
+        id: "clearwater-river-74b29",
         season: "Open Sept 1 to Oct 31",
         waterbody: "Clearwater River",
         waterbody_detail:
-          "Mainstem from the Banff National Park  boundary downstream to Timber Creek",
+          "Mainstem from the Banff National Park boundary downstream to Timber Creek",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -17605,11 +17668,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "clearwater-river-632c5",
+        id: "clearwater-river-7293f",
         season: "Closed All Year",
         waterbody: "Clearwater River",
         waterbody_detail:
-          "Tributaries from the Banff National Park  boundary downstream to and including Timber  Creek",
+          "Tributaries from the Banff National Park boundary downstream to and including Timber Creek",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -17618,20 +17681,21 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "clearwater-river-c7e4c",
+        id: "clearwater-river-42fb2",
         season: "Open Apr 1 to Aug 31",
         waterbody: "Clearwater River",
         waterbody_detail:
-          "Mainstem from Timber Creek downstream to  the Forestry Trunk Road (bridge at 5-35-09-W5)  and tributaries (except Elk Creek)",
+          "Mainstem from Timber Creek downstream to the Forestry Trunk Road (bridge at 5-35-09-W5) and tributaries (except Elk Creek)",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
@@ -17642,11 +17706,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "clearwater-river-8da0d",
+        id: "clearwater-river-5aa71",
         season: "Open Sept 1 to Oct 31",
         waterbody: "Clearwater River",
         waterbody_detail:
-          "Mainstem from Timber Creek downstream to  the Forestry Trunk Road (bridge at 5-35-09-W5)  and tributaries (except Elk Creek)",
+          "Mainstem from Timber Creek downstream to the Forestry Trunk Road (bridge at 5-35-09-W5) and tributaries (except Elk Creek)",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -17661,15 +17725,15 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "clearwater-river-7f5ac",
+        id: "clearwater-river-972ff",
         season: "Open Apr 1 to Oct 31",
         waterbody: "Clearwater River",
         waterbody_detail:
-          "Mainstem from Forestry Trunk Road (bridge  at 5-35-09-W5) downstream to the North  Saskatchewan River",
+          "Mainstem from Forestry Trunk Road (bridge at 5-35-09-W5) downstream to the North Saskatchewan River",
         fish_limits: {
-          walleye: "3 over50 cm",
+          walleye: "3 over 50 cm",
           northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "10 fish",
           goldeye: "",
@@ -17747,29 +17811,30 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "cline-river-13ce6",
+        id: "cline-river-33556",
         season: "Open June 16 to Aug 31",
         waterbody: "Cline River",
         waterbody_detail:
-          "Mainstem and tributaries downstream to  the Highway 11 (Cline River) bridge except  tributaries to Coral Lake, Pinto Lake, all waterwithin the White Goat Wilderness Area and the  outlet of Pinto Lake for 1.5 km downstream.",
+          "Mainstem and tributaries downstream to the Highway 11 (Cline River) bridge except tributaries to Coral Lake, Pinto Lake, all water within the White Goat Wilderness Area and the outlet of Pinto Lake for 1.5 km downstream.",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "over 30  cm",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "over 30 cm",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "cline-river-cc33f",
+        id: "cline-river-8cf52",
         season: "Open Sept 1 to Oct 31",
         waterbody: "Cline River",
         waterbody_detail:
-          "Mainstem and tributaries downstream to  the Highway 11 (Cline River) bridge except  tributaries to Coral Lake, Pinto Lake, all waterwithin the White Goat Wilderness Area and the  outlet of Pinto Lake for 1.5 km downstream.",
+          "Mainstem and tributaries downstream to the Highway 11 (Cline River) bridge except tributaries to Coral Lake, Pinto Lake, all water within the White Goat Wilderness Area and the outlet of Pinto Lake for 1.5 km downstream.",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -17778,6 +17843,31 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
+        },
+      },
+    ],
+  },
+  "Clyde-Lake": {
+    id: "Clyde-Lake",
+    name: "Clyde Lake",
+    groupExceptionZone: null,
+    waterbodies: [
+      {
+        bait_ban: "Bait allowed",
+        fish_management_zone: "NB1-Lakes",
+        id: "clyde-lake-eaf70",
+        season: "Open May 15 to Mar 31",
+        waterbody: "Clyde Lake",
+        waterbody_detail: "Clyde Lake",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "1 fish",
+          yellow_perch: "15 fish",
+          lake_trout: "",
+          lake_whitefish: "",
+          burbot: "",
+          trout_total: "",
         },
       },
     ],
@@ -18176,9 +18266,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Crane-(Moore)-Lake-": {
-    id: "Crane-(Moore)-Lake-",
-    name: "Crane (Moore) Lake ",
+  "Crane-(Moore)-Lake": {
+    id: "Crane-(Moore)-Lake",
+    name: "Crane (Moore) Lake",
     groupExceptionZone: null,
     waterbodies: [
       {
@@ -18186,7 +18276,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_management_zone: "NB1-Lakes",
         id: "crane-moore-lake-53998",
         season: "Open May 15 to Mar 31",
-        waterbody: "Crane (Moore) Lake ",
+        waterbody: "Crane (Moore) Lake",
         waterbody_detail: "Includes outlet stream",
         fish_limits: {
           walleye: "0 fish",
@@ -18681,6 +18771,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
       {
@@ -18693,11 +18784,12 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
       {
@@ -18715,6 +18807,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -18806,7 +18899,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "1 fish",
-          yellow_perch: "",
+          yellow_perch: "15 fish",
           lake_trout: "",
           lake_whitefish: "",
           burbot: "",
@@ -19086,6 +19179,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -19208,6 +19302,33 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "0 fish",
+        },
+      },
+    ],
+  },
+  "Emerald-(Hart)-Lake": {
+    id: "Emerald-(Hart)-Lake",
+    name: "Emerald (Hart) Lake",
+    groupExceptionZone: null,
+    waterbodies: [
+      {
+        bait_ban: "Bait except bait fish allowed",
+        fish_management_zone: "ES1-Lakes",
+        id: "emerald-hart-lake-b7b30",
+        season: "Open All Year",
+        waterbody: "Emerald (Hart) Lake",
+        waterbody_detail: "SE-8-8-5-W5",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "",
+          yellow_perch: "",
+          lake_trout: "3 fish",
+          mountain_whitefish: "3 over 30 cm",
+          cutthroat_trout: "",
+          brook_trout: "",
+          dolly_varden: "",
+          rainbow_trout: "",
+          trout_total: "5 trout",
         },
       },
     ],
@@ -19335,11 +19456,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "fall-creek-9ff4d",
+        id: "fall-creek-b9e3c",
         season: "Open June 16 to Oct 31",
         waterbody: "Fall Creek",
         waterbody_detail:
-          "Mainstem and tribuatries; Upstream of the falls  at 11-31-37-11-W5",
+          "Mainstem and tribuatries; Upstream of the falls at 11-31-37-11-W5",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -19348,16 +19469,17 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "fall-creek-4757f",
+        id: "fall-creek-1cf0f",
         season: "Closed All Year",
         waterbody: "Fall Creek",
         waterbody_detail:
-          "Mainstem and tributaries downstream of the  falls at 11-31-37-11-W5",
+          "Mainstem and tributaries downstream of the falls at 11-31-37-11-W5",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -19366,6 +19488,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -19385,11 +19508,12 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "3 over30 cm",
+          mountain_whitefish: "3 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
     ],
@@ -20306,9 +20430,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "glover-birch-lake-427c1",
+        id: "glover-birch-lake-fe107",
         season: "Open May 15 to Mar 31",
         waterbody: "Glover (Birch) Lake",
         waterbody_detail: "79-5-W4",
@@ -20716,14 +20840,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "gregoire-willow-lake-59f4e",
+        id: "gregoire-willow-lake-f0be4",
         season: "Open May 15 to Mar 31",
         waterbody: "Gregoire (Willow) Lake",
         waterbody_detail: "Gregoire (Willow) Lake",
         fish_limits: {
-          walleye: "",
+          walleye: "0 or SHL tags",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -20741,16 +20865,16 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "grist-lake-59f4e",
+        id: "grist-lake-f0be4",
         season: "Open May 15 to Mar 31",
         waterbody: "Grist Lake",
         waterbody_detail: "Grist Lake",
         fish_limits: {
-          walleye: "",
+          walleye: "0 fish",
           northern_pike: "0 fish",
-          yellow_perch: "0 fish",
+          yellow_perch: "",
           lake_trout: "1 fish 60-70 cm",
           lake_whitefish: "10 fish",
           burbot: "",
@@ -21304,9 +21428,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "hooker-lake-c4c40",
+        id: "hooker-lake-a2fec",
         season: "Open All Year",
         waterbody: "Hooker Lake",
         waterbody_detail: "Hooker Lake",
@@ -21762,11 +21886,12 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "0 fish",
           northern_pike: "3 fish",
-          mountain_whitefish: "3 over30 cm",
+          mountain_whitefish: "3 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
     ],
@@ -22233,9 +22358,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "kimowin-hook-lake-59f4e",
+        id: "kimowin-hook-lake-f0be4",
         season: "Open May 15 to Mar 31",
         waterbody: "Kimowin (Hook) Lake",
         waterbody_detail: "Kimowin (Hook) Lake",
@@ -22284,9 +22409,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "kirby-sterner-lake-686aa",
+        id: "kirby-sterner-lake-948c5",
         season: "Open May 15 to Mar 31",
         waterbody: "Kirby (Sterner) Lake",
         waterbody_detail: "75-5-W4",
@@ -22585,14 +22710,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "lake-athabasca-c4c40",
+        id: "lake-athabasca-a2fec",
         season: "Open All Year",
         waterbody: "Lake Athabasca",
         waterbody_detail: "Lake Athabasca",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "3 fish",
@@ -22647,7 +22772,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           yellow_perch: "",
           lake_trout: "",
           mountain_whitefish: "",
-          cutthroat_trout: "2 fish",
+          cutthroat_trout: "",
           burbot: "",
           rainbow_trout: "",
           trout_total: "2 trout",
@@ -22666,7 +22791,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           yellow_perch: "",
           lake_trout: "",
           mountain_whitefish: "",
-          cutthroat_trout: "2 fish ",
+          cutthroat_trout: " ",
           burbot: "",
           rainbow_trout: "",
           trout_total: "2 trout",
@@ -22896,9 +23021,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "leggo-lake-c4c40",
+        id: "leggo-lake-a2fec",
         season: "Open All Year",
         waterbody: "Leggo Lake",
         waterbody_detail: "Leggo Lake",
@@ -22921,14 +23046,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "leland-lakes-c4c40",
+        id: "leland-lakes-a2fec",
         season: "Open All Year",
         waterbody: "Leland Lakes",
         waterbody_detail: "Leland Lakes",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "3 fish",
@@ -23110,14 +23235,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "limon-lake-a3c42",
+        id: "limon-lake-381b4",
         season: "Open May 15 to Mar 31",
         waterbody: "Limon Lake",
         waterbody_detail: "Includes outlet",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -23166,7 +23291,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Little Bow Lake Reservoir",
         waterbody_detail: "Includes inlet canal",
         fish_limits: {
-          walleye: "0 fish",
+          walleye: "1 fish 50-55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           mountain_whitefish: "",
@@ -23276,11 +23401,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "little-red-deer-b9241",
+        id: "little-red-deer-5dbb5",
         season: "Open Apr 1 to Oct 31",
         waterbody: "Little Red Deer River",
         waterbody_detail:
-          "Headwater downstream to Twp. Rd. 352  (Cottonwood Road) and tributaries except  Dogpound Creek. See PP2 for Little Red DeerRiver downstream of Twp. Rd. 352.",
+          "Headwater downstream to Twp. Rd. 352 (Cottonwood Road) and tributaries except Dogpound Creek. See PP2 for Little Red Deer River downstream of Twp. Rd. 352.",
         fish_limits: {
           walleye: "",
           northern_pike: "3 fish",
@@ -23289,6 +23414,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
       {
@@ -23884,14 +24010,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "loutit-lake-c4c40",
+        id: "loutit-lake-a2fec",
         season: "Open All Year",
         waterbody: "Loutit Lake",
         waterbody_detail: "Loutit Lake",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -24019,6 +24145,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
       {
@@ -24337,14 +24464,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "mcclelland-lake-c4c40",
+        id: "mcclelland-lake-a2fec",
         season: "Open All Year",
         waterbody: "Mcclelland Lake",
         waterbody_detail: "Mcclelland Lake",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "3 fish",
@@ -24369,7 +24496,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Mcgregor Reservoir",
         waterbody_detail: "Mcgregor Reservoir",
         fish_limits: {
-          walleye: "0 fish",
+          walleye: "1 fish 50-55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           mountain_whitefish: "",
@@ -24386,7 +24513,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Mcgregor Reservoir",
         waterbody_detail: "Mcgregor Reservoir",
         fish_limits: {
-          walleye: "0 fish",
+          walleye: "1 fish 50-55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           mountain_whitefish: "",
@@ -24610,9 +24737,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "mercredi-lake-c4c40",
+        id: "mercredi-lake-a2fec",
         season: "Open All Year",
         waterbody: "Mercredi Lake",
         waterbody_detail: "Mercredi Lake",
@@ -24675,35 +24802,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Michele-(Upper-And-Lower)--Lakes-": {
-    id: "Michele-(Upper-And-Lower)--Lakes-",
-    name: "Michele (Upper And Lower) \nLakes ",
-    groupExceptionZone: null,
-    waterbodies: [
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Lakes",
-        id: "michele-upper-and-e9f91",
-        season: "Closed All Year",
-        waterbody: "Michele (Upper And Lower) \nLakes ",
-        waterbody_detail: "Tributaries",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "",
-          yellow_perch: "",
-          lake_trout: "",
-          mountain_whitefish: "",
-          cutthroat_trout: "",
-          burbot: "",
-          rainbow_trout: "",
-          trout_total: "",
-        },
-      },
-    ],
-  },
-  "Michele-(Upper-And-Lower)-Lakes-": {
-    id: "Michele-(Upper-And-Lower)-Lakes-",
-    name: "Michele (Upper And Lower) Lakes ",
+  "Michele-(Upper-And-Lower)-Lakes": {
+    id: "Michele-(Upper-And-Lower)-Lakes",
+    name: "Michele (Upper And Lower) Lakes",
     groupExceptionZone: null,
     waterbodies: [
       {
@@ -24711,7 +24812,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_management_zone: "ES2-Lakes",
         id: "michele-upper-and-466b3",
         season: "Open Aug 1 to Oct 31",
-        waterbody: "Michele (Upper And Lower) Lakes ",
+        waterbody: "Michele (Upper And Lower) Lakes",
         waterbody_detail: "2,11-36-20-W5",
         fish_limits: {
           walleye: "",
@@ -24723,6 +24824,25 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           rainbow_trout: "",
           trout_total: "1 trout over 35 cm",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Lakes",
+        id: "michele-upper-and-e9f91",
+        season: "Closed All Year",
+        waterbody: "Michele (Upper And Lower) Lakes",
+        waterbody_detail: "Tributaries",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "",
+          yellow_perch: "",
+          lake_trout: "",
+          mountain_whitefish: "",
+          cutthroat_trout: "",
+          burbot: "",
+          rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -25260,7 +25380,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail: "Includes tributaries and outlet for 1 km",
         fish_limits: {
           walleye: "0 fish",
-          northern_pike: "0 fish",
+          northern_pike: "1 fish",
           yellow_perch: "0 fish",
           lake_trout: "",
           lake_whitefish: "0 fish",
@@ -25395,14 +25515,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "myers-lake-c4c40",
+        id: "myers-lake-a2fec",
         season: "Open All Year",
         waterbody: "Myers Lake",
         waterbody_detail: "Myers Lake",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -25554,6 +25674,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "0 fish",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -25619,6 +25740,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -25643,102 +25765,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
-        },
-      },
-    ],
-  },
-  "North-Saskatchewan--River": {
-    id: "North-Saskatchewan--River",
-    name: "North Saskatchewan  River",
-    groupExceptionZone: null,
-    waterbodies: [
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "north-saskatchewan--2d7c0",
-        season: "Open Apr 1 to Aug 31",
-        waterbody: "North Saskatchewan  River",
-        waterbody_detail:
-          "Mainstem and tributaries from Banff National  Park boundary downstream to Abraham Lake  (2-18-36-17-W5) and tributaries includingtributaries to Abraham Lake, except Cline River  and Siffleur River",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "Over30 cm",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "Over30 cm",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "north-saskatchewan--09e29",
-        season: "Open Sept 1 to Oct 31",
-        waterbody: "North Saskatchewan  River",
-        waterbody_detail:
-          "Mainstem and tributaries from Banff National  Park boundary downstream to Abraham Lake  (2-18-36-17-W5) and tributaries includingtributaries to Abraham Lake, except Cline River  and Siffleur River",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "",
-          mountain_whitefish: "0 fish",
-          cutthroat_trout: "",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "north-saskatchewan--cc154",
-        season: "Apr 1 to Oct 31",
-        waterbody: "North Saskatchewan  River",
-        waterbody_detail: "Mainstem from Bighorn Dam downstream to  Hwy 22/39",
-        fish_limits: {
-          walleye: "3 over50 cm",
-          northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "Over35 cm",
-          burbot: "10 fish",
-          goldeye: "10 fish",
-          rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "north-saskatchewan--0bbb0",
-        season: "Open Apr 1 to Aug 31",
-        waterbody: "North Saskatchewan  River",
-        waterbody_detail:
-          "Tributaries from Bighorn Dam downstream  to Hwy 22/39 (except Baptiste River, Bighorn  River, Brazeau River, Clearwater River,Ram  River, Wolf Creek and Washout Creek)",
-        fish_limits: {
-          walleye: "3 over50 cm",
-          northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "Over35 cm",
-          burbot: "10 fish",
-          goldeye: "10 fish",
-          rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "north-saskatchewan--be3ec",
-        season: "Open Sept 1 to Oct 31",
-        waterbody: "North Saskatchewan  River",
-        waterbody_detail:
-          "Tributaries from Bighorn Dam downstream  to Hwy 22/39 (except Baptiste River, Bighorn  River, Brazeau River, Clearwater River,Ram  River, Wolf Creek and Washout Creek)",
-        fish_limits: {
-          walleye: "3 over50 cm",
-          northern_pike: "3 fish",
-          mountain_whitefish: "0 fish",
-          cutthroat_trout: "",
-          burbot: "10 fish",
-          goldeye: "10 fish",
-          rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -25748,6 +25775,100 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     name: "North Saskatchewan River",
     groupExceptionZone: null,
     waterbodies: [
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "north-saskatchewan-river-54925",
+        season: "Open Apr 1 to Aug 31",
+        waterbody: "North Saskatchewan River",
+        waterbody_detail:
+          "Mainstem and tributaries from Banff National Park boundary downstream to Abraham Lake (2-18-36-17-W5) and tributaries including tributaries to Abraham Lake, except Cline River and Siffleur River",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "Over 30 cm",
+          burbot: "",
+          goldeye: "",
+          rainbow_trout: "Over 30 cm",
+          trout_total: "2 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "north-saskatchewan-river-9fbb3",
+        season: "Open Sept 1 to Oct 31",
+        waterbody: "North Saskatchewan River",
+        waterbody_detail:
+          "Mainstem and tributaries from Banff National Park boundary downstream to Abraham Lake (2-18-36-17-W5) and tributaries including tributaries to Abraham Lake, except Cline River and Siffleur River",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "",
+          mountain_whitefish: "0 fish",
+          cutthroat_trout: "",
+          burbot: "",
+          goldeye: "",
+          rainbow_trout: "",
+          trout_total: "0 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "north-saskatchewan-river-0da43",
+        season: "Apr 1 to Oct 31",
+        waterbody: "North Saskatchewan River",
+        waterbody_detail: "Mainstem from Bighorn Dam downstream to Hwy 22/39",
+        fish_limits: {
+          walleye: "3 over 50 cm",
+          northern_pike: "3 fish",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "Over 35 cm",
+          burbot: "10 fish",
+          goldeye: "10 fish",
+          rainbow_trout: "",
+          trout_total: "2 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "north-saskatchewan-river-f2f94",
+        season: "Open Apr 1 to Aug 31",
+        waterbody: "North Saskatchewan River",
+        waterbody_detail:
+          "Tributaries from Bighorn Dam downstream to Hwy 22/39 (except Baptiste River, Bighorn River, Brazeau River, Clearwater River, Ram River, Wolf Creek and Washout Creek)",
+        fish_limits: {
+          walleye: "3 over 50 cm",
+          northern_pike: "3 fish",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "Over 35 cm",
+          burbot: "10 fish",
+          goldeye: "10 fish",
+          rainbow_trout: "",
+          trout_total: "2 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "north-saskatchewan-river-72375",
+        season: "Open Sept 1 to Oct 31",
+        waterbody: "North Saskatchewan River",
+        waterbody_detail:
+          "Tributaries from Bighorn Dam downstream to Hwy 22/39 (except Baptiste River, Bighorn River, Brazeau River, Clearwater River, Ram River, Wolf Creek and Washout Creek)",
+        fish_limits: {
+          walleye: "3 over 50 cm",
+          northern_pike: "3 fish",
+          mountain_whitefish: "0 fish",
+          cutthroat_trout: "",
+          burbot: "10 fish",
+          goldeye: "10 fish",
+          rainbow_trout: "",
+          trout_total: "0 trout",
+        },
+      },
       {
         bait_ban: "Bait allowed",
         fish_management_zone: "PP2-Rivers",
@@ -26185,9 +26306,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "one-week-lake-c4c40",
+        id: "one-week-lake-a2fec",
         season: "Open All Year",
         waterbody: "One Week Lake",
         waterbody_detail: "One Week Lake",
@@ -26319,9 +26440,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "pans-lake-c4c40",
+        id: "pans-lake-a2fec",
         season: "Open All Year",
         waterbody: "Pans Lake",
         waterbody_detail: "Pans Lake",
@@ -26598,9 +26719,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "peters-lake-c4c40",
+        id: "peters-lake-a2fec",
         season: "Open All Year",
         waterbody: "Peters Lake",
         waterbody_detail: "Peters Lake",
@@ -26960,11 +27081,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "pinto-creek-e46ee",
+        id: "pinto-creek-721e3",
         season: "Closed All Year",
         waterbody: "Pinto Creek",
         waterbody_detail:
-          "35-29-10-W5; Tributary to North Burnt Timber  Creek; Mainstem and tributaries",
+          "35-29-10-W5; Tributary to North Burnt Timber Creek; Mainstem and tributaries ",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -26973,78 +27094,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "pinto-creek-23821",
-        season: "Open Apr 1 to Aug 31",
-        waterbody: "Pinto Creek",
-        waterbody_detail:
-          "Mainstem upstream of the North Fork Road  and all tributaries (except Swan Creek and  tributaries between Vetch and SwanCreek)",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
-          cutthroat_trout: "",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "pinto-creek-e5474",
-        season: "Open Sept 1 to Oct 31",
-        waterbody: "Pinto Creek",
-        waterbody_detail:
-          "Mainstem upstream of the North Fork Road  and all tributaries (except Swan Creek and  tributaries between Vetch and SwanCreek)",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "3 fish",
-          mountain_whitefish: "0 fish",
-          cutthroat_trout: "",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "pinto-creek-cbe6b",
-        season: "Open Apr 1 to Aug 31",
-        waterbody: "Pinto Creek",
-        waterbody_detail:
-          "The portion of the mainstem and tributaries  between Vetch and Swan Creeks",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "3 fish",
-          mountain_whitefish: "0 fish",
-          cutthroat_trout: "",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "",
-        },
-      },
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "pinto-creek-c7c25",
-        season: "Open Apr 1 to Oct 31",
-        waterbody: "Pinto Creek",
-        waterbody_detail:
-          "The remainder of the mainstem downstream  of the North Fork Road (except the portion  between Vetch and Swan Creeks)",
-        fish_limits: {
-          walleye: "3 over50 cm",
-          northern_pike: "3 fish",
-          mountain_whitefish: "0 fish",
-          cutthroat_trout: "",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -27076,9 +27126,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Pit-24-Lake-": {
-    id: "Pit-24-Lake-",
-    name: "Pit 24 Lake ",
+  "Pit-24-Lake": {
+    id: "Pit-24-Lake",
+    name: "Pit 24 Lake",
     groupExceptionZone: null,
     waterbodies: [
       {
@@ -27086,7 +27136,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_management_zone: "ES3-Lakes",
         id: "pit-24-lake-afe60",
         season: "Open All Year",
-        waterbody: "Pit 24 Lake ",
+        waterbody: "Pit 24 Lake",
         waterbody_detail: "15,16, NE4-47-19-W5",
         fish_limits: {
           walleye: "",
@@ -27126,9 +27176,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Pit-44-Lake-": {
-    id: "Pit-44-Lake-",
-    name: "Pit 44 Lake ",
+  "Pit-44-Lake": {
+    id: "Pit-44-Lake",
+    name: "Pit 44 Lake",
     groupExceptionZone: null,
     waterbodies: [
       {
@@ -27136,7 +27186,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_management_zone: "ES3-Lakes",
         id: "pit-44-lake-2a298",
         season: "Open All Year",
-        waterbody: "Pit 44 Lake ",
+        waterbody: "Pit 44 Lake",
         waterbody_detail: "SW 35-46-19-W5",
         fish_limits: {
           walleye: "",
@@ -27255,9 +27305,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "potts-lake-c4c40",
+        id: "potts-lake-a2fec",
         season: "Open All Year",
         waterbody: "Potts Lake",
         waterbody_detail: "Potts Lake",
@@ -27270,6 +27320,89 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           cisco: "",
           goldeye: "",
+        },
+      },
+    ],
+  },
+  "Prairie-Creek": {
+    id: "Prairie-Creek",
+    name: "Prairie Creek",
+    groupExceptionZone: null,
+    waterbodies: [
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "prairie-creek-6ef43",
+        season: "Open Apr 1 to Aug 31",
+        waterbody: "Prairie Creek",
+        waterbody_detail:
+          "Mainstem upstream of the North Fork Road and all tributaries (except Swan Creek and tributaries between Vetch and Swan Creek)",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "3 fish",
+          mountain_whitefish: "5 over 30 cm",
+          cutthroat_trout: "",
+          burbot: "",
+          goldeye: "",
+          rainbow_trout: "",
+          trout_total: "2 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "prairie-creek-80270",
+        season: "Open Sept 1 to Oct 31",
+        waterbody: "Prairie Creek",
+        waterbody_detail:
+          "Mainstem upstream of the North Fork Road and all tributaries (except Swan Creek and tributaries between Vetch and Swan Creek)",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "3 fish",
+          mountain_whitefish: "0 fish",
+          cutthroat_trout: "",
+          burbot: "",
+          goldeye: "",
+          rainbow_trout: "",
+          trout_total: "0 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "prairie-creek-e2fe4",
+        season: "Open Apr 1 to Aug 31",
+        waterbody: "Prairie Creek",
+        waterbody_detail:
+          "The portion of the mainstem and tributaries between Vetch and Swan Creeks",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "3 fish",
+          mountain_whitefish: "0 fish",
+          cutthroat_trout: "",
+          burbot: "",
+          goldeye: "",
+          rainbow_trout: "",
+          trout_total: "0 trout",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "prairie-creek-237d4",
+        season: "Open Apr 1 to Oct 31",
+        waterbody: "Prairie Creek",
+        waterbody_detail:
+          "The remainder of the mainstem downstream of the North Fork Road (except the portion between Vetch and Swan Creeks)",
+        fish_limits: {
+          walleye: "3 over 50 cm",
+          northern_pike: "3 fish",
+          mountain_whitefish: "0 fish",
+          cutthroat_trout: "",
+          burbot: "",
+          goldeye: "",
+          rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -27451,11 +27584,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "ram-river-d0a98",
+        id: "ram-river-ce241",
         season: "Open June 16 to Oct 31",
         waterbody: "Ram River",
         waterbody_detail:
-          "Also known as South Ram River; Mainstem and  tributaries (except Fall Creek)",
+          "Also known as South Ram River; Mainstem and tributaries (except Fall Creek)",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -27464,6 +27597,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -27563,17 +27697,17 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Raven-Brood-TroutStation": {
-    id: "Raven-Brood-TroutStation",
-    name: "Raven Brood TroutStation",
+  "Raven-Brood-Trout-Station": {
+    id: "Raven-Brood-Trout-Station",
+    name: "Raven Brood Trout Station",
     groupExceptionZone: null,
     waterbodies: [
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "raven-brood-troutstation-2a157",
+        id: "raven-brood-trout-2a157",
         season: "Closed All Year",
-        waterbody: "Raven Brood TroutStation",
+        waterbody: "Raven Brood Trout Station",
         waterbody_detail: "SW-5-36-5-W5; All water within",
         fish_limits: {
           walleye: "",
@@ -27583,6 +27717,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -27595,19 +27730,20 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "raven-river-bafa7",
+        id: "raven-river-54359",
         season: "Open Apr 1 to Oct 31",
         waterbody: "Raven River",
         waterbody_detail:
-          "Mainstem and tributaries except North Raven  River (Stauffer Creek)",
+          "Mainstem and tributaries except North Raven River (Stauffer Creek)",
         fish_limits: {
           walleye: "0 fish",
           northern_pike: "3 fish",
-          mountain_whitefish: "3 over30 cm",
+          mountain_whitefish: "3 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -27695,11 +27831,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "red-deer-river-4063d",
+        id: "red-deer-river-81574",
         season: "Open Apr 1 to Oct 31",
         waterbody: "Red Deer River",
         waterbody_detail:
-          "Mainstem and tributaries from Banff National  Park boundary downstream to the Forestry  Trunk Road (13-31-10-W5)",
+          "Mainstem and tributaries from Banff National Park boundary downstream to the Forestry Trunk Road (13-31-10-W5)",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -27708,24 +27844,26 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "0 fish",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "red-deer-river-acfb5",
+        id: "red-deer-river-5d527",
         season: "Open Apr 1 to Oct 31",
         waterbody: "Red Deer River",
         waterbody_detail:
-          "Mainstem from Forestry Trunk Road downstream to Gleniffer (Reservoir) Lake and tributaries (except Fallentimber Creek, Raven  River, NorthRaven River and Pinto Creek)",
+          "Mainstem from Forestry Trunk Road downstream to Gleniffer (Reservoir) Lake and tributaries (except Fallentimber Creek, Raven River, North Raven River and Pinto Creek)",
         fish_limits: {
           walleye: "0 fish",
           northern_pike: "3 fish",
-          mountain_whitefish: "3 over30 cm",
+          mountain_whitefish: "3 over 30 cm",
           cutthroat_trout: "",
           burbot: "10 fish",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
       {
@@ -27921,15 +28059,15 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "richardson-backcountry-3d681",
+        id: "richardson-backcountry-71df9",
         season: "Open May 15 to Mar 31",
         waterbody: "Richardson Backcountry",
         waterbody_detail:
           "All water within area between Twp. 103 and 107, and Rge 01-W4 and Rge 08-W4; Locally known as Richardson Backcountry",
         fish_limits: {
-          walleye: "",
+          walleye: "1 over 50 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -27965,14 +28103,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "richardson-lake-4bd79",
+        id: "richardson-lake-ff5cd",
         season: "Open May 15 to Mar 31",
         waterbody: "Richardson Lake",
         waterbody_detail: "Includes outlet (Jackfish Channel)",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -28104,9 +28242,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "roderick-lake-c4c40",
+        id: "roderick-lake-a2fec",
         season: "Open All Year",
         waterbody: "Roderick Lake",
         waterbody_detail: "Roderick Lake",
@@ -28218,9 +28356,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "royemma-lake-0b13f",
+        id: "royemma-lake-22151",
         season: "Open May 15 to Mar 31",
         waterbody: "Royemma Lake",
         waterbody_detail: "75-1-W4",
@@ -28310,6 +28448,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -28347,14 +28486,14 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "ryan-lake-c4c40",
+        id: "ryan-lake-a2fec",
         season: "Open All Year",
         waterbody: "Ryan Lake",
         waterbody_detail: "Ryan Lake",
         fish_limits: {
-          walleye: "",
+          walleye: "3 over 43 cm",
           northern_pike: "3 over 63 cm",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -28362,30 +28501,6 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           cisco: "",
           goldeye: "",
-        },
-      },
-    ],
-  },
-  "Saddle-Lake": {
-    id: "Saddle-Lake",
-    name: "Saddle Lake",
-    groupExceptionZone: null,
-    waterbodies: [
-      {
-        bait_ban: "Bait allowed",
-        fish_management_zone: "NB1-Lakes",
-        id: "saddle-lake-89293",
-        season: "Open All Year",
-        waterbody: "Saddle Lake",
-        waterbody_detail: "Saddle Lake",
-        fish_limits: {
-          walleye: "3 over 50 cm",
-          northern_pike: "3 over 63 cm",
-          yellow_perch: "15 fish",
-          lake_trout: "",
-          lake_whitefish: "10 fish",
-          burbot: "10 fish",
-          trout_total: "",
         },
       },
     ],
@@ -28769,11 +28884,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "siffleur-river-a8ca6",
+        id: "siffleur-river-2898d",
         season: "Closed All Year",
         waterbody: "Siffleur River",
         waterbody_detail:
-          "Mainstem and tributaries downstream from  Banff National Park boundary",
+          "Mainstem and tributaries downstream from Banff National Park boundary ",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -28782,6 +28897,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -28810,19 +28926,12 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           trout_total: "",
         },
       },
-    ],
-  },
-  "Siffleur-WildernessArea": {
-    id: "Siffleur-WildernessArea",
-    name: "Siffleur WildernessArea",
-    groupExceptionZone: null,
-    waterbodies: [
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "siffleur-wildernessarea-02bc3",
+        id: "siffleur-wilderness-area-02bc3",
         season: "Closed All Year",
-        waterbody: "Siffleur WildernessArea",
+        waterbody: "Siffleur Wilderness Area",
         waterbody_detail: "All water within the Wilderness Area",
         fish_limits: {
           walleye: "",
@@ -28832,6 +28941,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -29175,7 +29285,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail: "Snipe Lake",
         fish_limits: {
           walleye: "1 over 50 cm",
-          northern_pike: "0 fish",
+          northern_pike: "1 fish 63-70 cm",
           yellow_perch: "5 fish",
           lake_whitefish: "10 fish",
           burbot: "10 fish",
@@ -29192,7 +29302,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail: "Tributaries and outlet 1 km downstream ",
         fish_limits: {
           walleye: "1 over 50 cm",
-          northern_pike: "0 fish",
+          northern_pike: "1 fish 63-70 cm",
           yellow_perch: "5 fish",
           lake_whitefish: "10 fish",
           burbot: "10 fish",
@@ -29717,9 +29827,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "st.-agnes-lake-c4c40",
+        id: "st.-agnes-lake-a2fec",
         season: "Open All Year",
         waterbody: "St. Agnes Lake",
         waterbody_detail: "St. Agnes Lake",
@@ -29883,9 +29993,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "steepbank-lake-59f4e",
+        id: "steepbank-lake-f0be4",
         season: "Open May 15 to Mar 31",
         waterbody: "Steepbank Lake",
         waterbody_detail: "Steepbank Lake",
@@ -29985,11 +30095,11 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES1-Rivers",
-        id: "storm-creek-56fa5",
+        id: "storm-creek-94e2d",
         season: "Closed All Year",
         waterbody: "Storm Creek",
         waterbody_detail:
-          "Upstream of Mist Creek confluence; Includes tributaries",
+          "Upstream of Mist Creek confluence; Includes tributaries (18-7-W5)",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -30229,45 +30339,47 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "swan-creek-04a5f",
+        id: "swan-creek-caab3",
         season: "Open Apr 1 to Aug 31",
         waterbody: "Swan Creek",
         waterbody_detail:
-          "Mainstem and tributaries; Downstream for 2 km  below Swan Lake",
+          "Mainstem and tributaries; Downstream for 2 km below Swan Lake",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "swan-creek-30171",
+        id: "swan-creek-87899",
         season: "Apr 1 to Aug 31",
         waterbody: "Swan Creek",
-        waterbody_detail: "The remainder including tributaries to Swan  Lake",
+        waterbody_detail: "The remainder including tributaries to Swan Lake",
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "swan-creek-df0ca",
+        id: "swan-creek-33ef1",
         season: "Sept 1 to Oct 31",
         waterbody: "Swan Creek",
-        waterbody_detail: "The remainder including tributaries to Swan  Lake",
+        waterbody_detail: "The remainder including tributaries to Swan Lake",
         fish_limits: {
           walleye: "",
           northern_pike: "",
@@ -30276,6 +30388,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "0 trout",
         },
       },
     ],
@@ -30462,11 +30575,12 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
     ],
@@ -30534,8 +30648,8 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Thurston Lake",
         waterbody_detail: "Thurston Lake",
         fish_limits: {
-          walleye: "0 fish",
-          northern_pike: "1 fish 63-70 cm",
+          walleye: "1 fish 50-55 cm",
+          northern_pike: "1 fish 65-80 cm",
           yellow_perch: "",
           lake_trout: "",
           lake_whitefish: "10 fish",
@@ -30551,8 +30665,8 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Thurston Lake",
         waterbody_detail: "Tributaries and outlet for 1 km",
         fish_limits: {
-          walleye: "0 fish",
-          northern_pike: "1 fish 63-70 cm",
+          walleye: "1 fish 50-55 cm",
+          northern_pike: "1 fish 65-80 cm",
           yellow_perch: "",
           lake_trout: "",
           lake_whitefish: "10 fish",
@@ -30697,7 +30811,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail:
           "Portion west of SW 2-15-22-W4 (North of a line from the farm building to Little Bow Provincial Park pumphouse on the east); no fishing within 100 m of the Canal inlet structure",
         fish_limits: {
-          walleye: "0 fish",
+          walleye: "1 fish 50-55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           mountain_whitefish: "",
@@ -30715,7 +30829,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail:
           "The remainder of the Reservoir including the canal between Travers and McGregor reservoirs; no fishing within 100m of the canal inlet structure",
         fish_limits: {
-          walleye: "0 fish",
+          walleye: "1 fish 50-55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           mountain_whitefish: "",
@@ -30732,9 +30846,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "treasure-loch-lake-c4c40",
+        id: "treasure-loch-lake-a2fec",
         season: "Open All Year",
         waterbody: "Treasure Loch Lake",
         waterbody_detail: "Treasure Loch Lake",
@@ -30781,9 +30895,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "tulip-lake-c4c40",
+        id: "tulip-lake-a2fec",
         season: "Open All Year",
         waterbody: "Tulip Lake",
         waterbody_detail: "Tulip Lake",
@@ -30806,9 +30920,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "turtle-lake-c4c40",
+        id: "turtle-lake-a2fec",
         season: "Open All Year",
         waterbody: "Turtle Lake",
         waterbody_detail: "Turtle Lake",
@@ -30886,7 +31000,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Twin Valley Reservoir",
         waterbody_detail: "Twin Valley Reservoir",
         fish_limits: {
-          walleye: "",
+          walleye: "0 fish",
           northern_pike: "1 over 63 cm",
           yellow_perch: "",
           mountain_whitefish: "",
@@ -31021,17 +31135,17 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Unnamed-(Devil'sFork)-Creek": {
-    id: "Unnamed-(Devil'sFork)-Creek",
-    name: "Unnamed (Devil'sFork) Creek",
+  "Unnamed-(Devil's-Fork)-Creek": {
+    id: "Unnamed-(Devil's-Fork)-Creek",
+    name: "Unnamed (Devil's Fork) Creek",
     groupExceptionZone: null,
     waterbodies: [
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "unnamed-devilsfork-creek-473be",
+        id: "unnamed-devils-fork-473be",
         season: "Closed All Year",
-        waterbody: "Unnamed (Devil'sFork) Creek",
+        waterbody: "Unnamed (Devil's Fork) Creek",
         waterbody_detail: "4-45-16-W5; Tributary to Brazeau River",
         fish_limits: {
           walleye: "",
@@ -31041,6 +31155,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "",
         },
       },
     ],
@@ -31618,9 +31733,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "wappau-lake-590f5",
+        id: "wappau-lake-d36a2",
         season: "Open May 15 to Mar 31",
         waterbody: "Wappau Lake",
         waterbody_detail: "14-75-11-W4",
@@ -31652,11 +31767,12 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_limits: {
           walleye: "",
           northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
     ],
@@ -31864,9 +31980,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "weekes-lake-c4c40",
+        id: "weekes-lake-a2fec",
         season: "Open All Year",
         waterbody: "Weekes Lake",
         waterbody_detail: "Weekes Lake",
@@ -31955,30 +32071,6 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "White-Goat-Wilderness--Area": {
-    id: "White-Goat-Wilderness--Area",
-    name: "White Goat Wilderness  Area",
-    groupExceptionZone: null,
-    waterbodies: [
-      {
-        bait_ban: "Bait ban",
-        fish_management_zone: "ES2-Rivers",
-        id: "white-goat-wilderness-02bc3",
-        season: "Closed All Year",
-        waterbody: "White Goat Wilderness  Area",
-        waterbody_detail: "All water within the Wilderness Area",
-        fish_limits: {
-          walleye: "",
-          northern_pike: "",
-          mountain_whitefish: "",
-          cutthroat_trout: "",
-          burbot: "",
-          goldeye: "",
-          rainbow_trout: "",
-        },
-      },
-    ],
-  },
   "White-Goat-Wilderness-Area": {
     id: "White-Goat-Wilderness-Area",
     name: "White Goat Wilderness Area",
@@ -31999,6 +32091,24 @@ export const waterbodyGroups: WaterbodyGroupMap = {
           mountain_whitefish: "",
           cutthroat_trout: "",
           burbot: "",
+          rainbow_trout: "",
+          trout_total: "",
+        },
+      },
+      {
+        bait_ban: "Bait ban",
+        fish_management_zone: "ES2-Rivers",
+        id: "white-goat-wilderness-02bc3",
+        season: "Closed All Year",
+        waterbody: "White Goat Wilderness Area",
+        waterbody_detail: "All water within the Wilderness Area",
+        fish_limits: {
+          walleye: "",
+          northern_pike: "",
+          mountain_whitefish: "",
+          cutthroat_trout: "",
+          burbot: "",
+          goldeye: "",
           rainbow_trout: "",
           trout_total: "",
         },
@@ -32238,7 +32348,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody: "Winagami Lake",
         waterbody_detail: "Includes Boone's Slough and South Heart Reservoir",
         fish_limits: {
-          walleye: "1 over 60 cm",
+          walleye: "1 over 55 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           lake_whitefish: "10 fish",
@@ -32255,7 +32365,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail:
           "Tributaries, inlet canal, outlet stream, and outlet canal",
         fish_limits: {
-          walleye: "1 over 60 cm",
+          walleye: "1 over 55 cm",
           northern_pike: "0 fish",
           yellow_perch: "",
           lake_whitefish: "10 fish",
@@ -32330,7 +32440,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         waterbody_detail:
           "For lake only.  For flowing water see Winefred Lake Tributaries and Outflows.",
         fish_limits: {
-          walleye: "",
+          walleye: "1 fish 45-50 cm",
           northern_pike: "0 fish",
           yellow_perch: "15 fish",
           lake_trout: "",
@@ -32342,9 +32452,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       },
     ],
   },
-  "Winefred-Lake-Tributaries-and-Outflows-": {
-    id: "Winefred-Lake-Tributaries-and-Outflows-",
-    name: "Winefred Lake Tributaries and Outflows ",
+  "Winefred-Lake-Tributaries-and-Outflows": {
+    id: "Winefred-Lake-Tributaries-and-Outflows",
+    name: "Winefred Lake Tributaries and Outflows",
     groupExceptionZone: null,
     waterbodies: [
       {
@@ -32352,7 +32462,7 @@ export const waterbodyGroups: WaterbodyGroupMap = {
         fish_management_zone: "NB4-Rivers",
         id: "winefred-lake-tributaries-d07a9",
         season: "Open June 1 to Oct 31",
-        waterbody: "Winefred Lake Tributaries and Outflows ",
+        waterbody: "Winefred Lake Tributaries and Outflows",
         waterbody_detail:
           "Includes all named and unnamed tributaries and outflows within 10km of Winefred Lake including Winefred River, (Unnamed) Sand River and Grist River",
         fish_limits: {
@@ -32373,9 +32483,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "winnifred-lake-74a9a",
+        id: "winnifred-lake-0999b",
         season: "Open All Year",
         waterbody: "Winnifred Lake",
         waterbody_detail: "118-3-W4",
@@ -32423,18 +32533,19 @@ export const waterbodyGroups: WaterbodyGroupMap = {
       {
         bait_ban: "Bait ban",
         fish_management_zone: "ES2-Rivers",
-        id: "wolf-creek-eac4c",
+        id: "wolf-creek-f27db",
         season: "Open All Year",
         waterbody: "Wolf Creek",
-        waterbody_detail: "13-47-8-W5; Rose Creek; Mainstem and  tributaries",
+        waterbody_detail: "13-47-8-W5; Rose Creek; Mainstem and tributaries",
         fish_limits: {
           walleye: "",
           northern_pike: "3 fish",
-          mountain_whitefish: "5 over30 cm",
+          mountain_whitefish: "5 over 30 cm",
           cutthroat_trout: "",
           burbot: "",
           goldeye: "",
           rainbow_trout: "",
+          trout_total: "2 trout",
         },
       },
     ],
@@ -32530,9 +32641,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "woodman-lake-c4c40",
+        id: "woodman-lake-a2fec",
         season: "Open All Year",
         waterbody: "Woodman Lake",
         waterbody_detail: "Woodman Lake",
@@ -32555,9 +32666,9 @@ export const waterbodyGroups: WaterbodyGroupMap = {
     groupExceptionZone: null,
     waterbodies: [
       {
-        bait_ban: "Bait ban",
+        bait_ban: "Bait allowed",
         fish_management_zone: "NB4-Lakes",
-        id: "wylie-lake-c4c40",
+        id: "wylie-lake-a2fec",
         season: "Open All Year",
         waterbody: "Wylie Lake",
         waterbody_detail: "Wylie Lake",
